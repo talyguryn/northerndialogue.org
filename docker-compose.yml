@@ -1,0 +1,14 @@
+version: '2'
+services:
+    php:
+        build: docker/php
+        volumes:
+            - ./app:/var/www/app
+    nginx:
+        build: docker/nginx
+        ports:
+            - 8081:8081
+        links:
+            - php
+        volumes_from:
+            - php
