@@ -13,4 +13,4 @@ RUN mv composer.phar /usr/local/bin/composer
 RUN rm /etc/localtime
 RUN ln -s /usr/share/zoneinfo/Europe/Moscow /etc/localtime
 
-WORKDIR /var/www/app
+WORKDIR /var/www/app/backend
