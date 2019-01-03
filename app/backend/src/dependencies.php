@@ -1,19 +1,72 @@
 <?php
-// DIC configuration
 
 $container = $app->getContainer();
 
-// view renderer
+/**
+ * View renderer
+ */
 $container['renderer'] = function ($c) {
     $settings = $c->get('settings')['renderer'];
     return new Slim\Views\PhpRenderer($settings['template_path']);
 };
 
-// monolog
+/**
+ * Monolog
+ */
 $container['logger'] = function ($c) {
     $settings = $c->get('settings')['logger'];
+
     $logger = new Monolog\Logger($settings['name']);
+
     $logger->pushProcessor(new Monolog\Processor\UidProcessor());
     $logger->pushHandler(new Monolog\Handler\StreamHandler($settings['path'], $settings['level']));
+
     return $logger;
+};
+
+/**
+ * Hawk catcher
+ */
+$container['hawk'] = function ($c) {
+    $settings = $c->get('settings')['hawk'];
+
+    $logger = new Monolog\Logger($settings['name']);
+
+    if ($settings['token']) {
+        // Send error to Hawk
+        $logger->pushHandler(new \Hawk\Monolog\Handler($settings['token'], $settings['level']));
+
+        // Write down to log file
+        $logger->pushHandler(new Monolog\Handler\StreamHandler($settings['path'], $settings['level']));
+    }
+
+    return $logger;
+};
+
+/**
+ * Set up error handler
+ *
+ * @todo create a separate class
+ */
+$container['errorHandler'] = function ($c) {
+    return function ($request, $response, $exception) use ($c) {
+        // Send error to Hawk
+        $c->hawk->error($exception->getMessage(), ['exception' => $exception]);
+
+        return $response->withStatus(500)
+                        ->withHeader('Content-Type', 'text/html')
+                        ->write('Something went wrong!');
+    };
+};
+
+
+$container['phpErrorHandler'] = function ($c) {
+    return function ($request, $response, $exception) use ($c) {
+        // Send error to Hawk
+        $c->hawk->error($exception->getMessage(), ['exception' => $exception]);
+
+        return $response->withStatus(500)
+                        ->withHeader('Content-Type', 'text/html')
+                        ->write('Something went wrong!');
+    };
 };

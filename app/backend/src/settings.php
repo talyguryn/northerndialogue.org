@@ -6,14 +6,22 @@ return [
 
         // Renderer settings
         'renderer' => [
-            'template_path' => __DIR__ . '/../templates/',
+            'template_path' => PROJECT_ROOT . 'templates/',
         ],
 
         // Monolog settings
         'logger' => [
             'name' => 'slim-app',
-            'path' => isset($_ENV['docker']) ? 'php://stdout' : __DIR__ . '/../logs/app.log',
+            'path' => PROJECT_ROOT . 'logs/app.log',
             'level' => \Monolog\Logger::DEBUG,
         ],
+
+        // Hawk catcher settings
+        'hawk' => [
+            'name' => 'hawk-catcher',
+            'token' => $_ENV['HAWK_TOKEN'],
+            'level' => \Monolog\Logger::DEBUG,
+            'path' => PROJECT_ROOT . 'logs/hawk.log',
+        ]
     ],
 ];
