@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "build": "webpack --mode development --progress --display-error-details --display-entrypoints --display-reasons --watch",
-    "build:prod": "webpack --mode production"
+    "build": "webpack --mode production",
+    "build:dev": "webpack --mode development --progress --display-error-details --display-entrypoints --display-reasons --watch"
   },
   "devDependencies": {
     "@babel/core": "^7.2.0",

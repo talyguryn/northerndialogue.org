@@ -5,6 +5,9 @@
         "slim/php-view": "^2.0",
         "monolog/monolog": "^1.17",
         "vlucas/phpdotenv": "^3.0",
-        "codex-team/hawk.php": "^1.2"
+        "codex-team/hawk.php": "^1.2",
+        "morris/microdb": "^0.1.1",
+        "lefuturiste/slim3_multilanguage": "^0.8.3",
+        "slim/twig-view": "^2.4"
     }
 }

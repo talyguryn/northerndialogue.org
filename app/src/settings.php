@@ -22,6 +22,14 @@ return [
             'token' => $_ENV['HAWK_TOKEN'],
             'level' => \Monolog\Logger::DEBUG,
             'path' => PROJECT_ROOT . 'logs/hawk.log',
+        ],
+
+        'lang' => [
+            'default' => $_ENV['LANG'],
+            'available' => [
+                'en_US',
+                'ru_RU'
+            ]
         ]
     ],
 ];

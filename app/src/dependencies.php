@@ -70,3 +70,11 @@ $container['phpErrorHandler'] = function ($c) {
                         ->write('Something went wrong!');
     };
 };
+
+$container['view'] = function ($c){
+    $view = new \Slim\Views\Twig(PROJECT_ROOT . 'views', [
+        'cache' => false
+    ]);
+
+    return $view;
+};

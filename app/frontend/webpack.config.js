@@ -5,14 +5,14 @@ module.exports = {
   /**
    * Define entry point
    */
-  entry: path.resolve(__dirname, 'frontend', 'src', 'index.js'),
+  entry: path.resolve(__dirname, 'src', 'index.js'),
 
   /**
    * Set bundle params
    */
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'frontend', 'dist'),
+    path: path.resolve(__dirname, '..', 'public', 'public'),
     library: 'app',
   },
 
