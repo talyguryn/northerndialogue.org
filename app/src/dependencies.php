@@ -71,6 +71,9 @@ $container['phpErrorHandler'] = function ($c) {
     };
 };
 
+/**
+ * Twig processor
+ */
 $container['view'] = function ($c){
     $view = new \Slim\Views\Twig(PROJECT_ROOT . 'views', [
         'cache' => false
