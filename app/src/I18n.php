@@ -2,7 +2,14 @@
 
 namespace App;
 
+use Dflydev\FigCookies\FigRequestCookies;
+use Dflydev\FigCookies\FigResponseCookies;
+use Dflydev\FigCookies\SetCookie;
+
 class I18n {
+
+    const COOKIE_NAME = 'lang';
+    const GET_PARAM_NAME = 'lang';
 
     private $container;
 
@@ -20,12 +27,18 @@ class I18n {
         $this->twig = $container['view']->getEnvironment();
     }
 
-    public function __invoke($request, $response, $next)
-    {
-        $this->lang = $this->getLang();
+    public function __invoke($request, $response, $next) {
+        /**
+         * Detect language
+         */
+        $this->lang = $this->getLang($request);
+
+        /**
+         * Save lang param to cookies
+         */
+        $response = $this->setLang($response);
 
         $STAILang = new STAILang($this->lang, $this->settings['folder']);
-
         $dictionaryArray = $STAILang->getFileAsArray();
 
         $this->twig->addGlobal('lang', $this->lang);
@@ -41,11 +54,31 @@ class I18n {
         return $next($request, $response);
     }
 
-    public function getLang()
+    public function getLang($request): string
     {
-        // todo detect $requestedLang
-        $requestedLang = $_GET['lang'];
+        /**
+         * Get lang from GET params
+         */
+        $langFromGET = $_GET[self::GET_PARAM_NAME];
 
+        /**
+         * Get lang from cookies
+         */
+        $langFromCookie = FigRequestCookies::get($request, self::COOKIE_NAME)->getValue();
+
+        /**
+         * Get lang from headers
+         */
+        $langFromHeaders = $this->getBrowserLang();
+
+        /**
+         * Detect requested lang by variables fallback chain
+         */
+        $requestedLang = $langFromGET ?: $langFromCookie ?: $langFromHeaders;
+
+        /**
+         * If this lang is not available then use default for site
+         */
         if (!in_array($requestedLang, $this->settings['available'])) {
             $requestedLang = $this->settings['default'];
         }
@@ -53,15 +86,19 @@ class I18n {
         return $requestedLang;
     }
 
-    // todo function set lang
+    private function setLang($response) {
+        return FigResponseCookies::set(
+            $response,
+            SetCookie::create(self::COOKIE_NAME)
+                     ->withValue($this->lang)
+        );
+    }
 
+    public function getBrowserLang() {
+        if (isset($_SERVER['HTTP_ACCEPT_LANGUAGE'])) {
+            return substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
+        }
 
-
-//    public function getBrowserLang(){
-//        if (isset($_SERVER['HTTP_ACCEPT_LANGUAGE'])) {
-//            return substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
-//        } else {
-//            return $this->defaultLang;
-//        }
-//    }
+        return;
+    }
 }

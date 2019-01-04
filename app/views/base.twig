@@ -6,7 +6,11 @@
     <link href="{{ filemtime('/public/bundle.css') }}" rel="stylesheet" type="text/css">
 </head>
 <body>
+    <a href="?lang=en">en</a> • <a href="?lang=ru">ru</a> • <a href="?lang=fr">fr</a>
+
     <div class="page">
+        <a href="/">{{ dict('Main page') }}</a>
+
         <h1>{{ dict('Hello World!') }}</h1>
     </div>
 
