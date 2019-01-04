@@ -28,6 +28,7 @@ return [
             'default' => $_ENV['LANG'],
             'available' => [
                 'en',
+                'fr',
                 'ru',
             ],
             'folder' => PROJECT_ROOT . 'lang/',
