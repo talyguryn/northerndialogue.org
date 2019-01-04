@@ -1,5 +1,7 @@
 <?php
 
+use App\TwigExtensions;
+
 $container = $app->getContainer();
 
 /**
@@ -78,6 +80,8 @@ $container['view'] = function ($c){
     $view = new \Slim\Views\Twig(PROJECT_ROOT . 'views', [
         'cache' => false
     ]);
+
+    $view->addExtension(new App\TwigExtensions($c));
 
     return $view;
 };

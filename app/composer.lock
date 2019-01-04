@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1ef16c6aec631dca96a5f2d9cfeecaeb",
+    "content-hash": "471a23044b52d5e07beb98de2742344b",
     "packages": [
         {
             "name": "codex-team/hawk.php",
@@ -70,45 +70,6 @@
             "description": "Promoting the interoperability of container objects (DIC, SL, etc.)",
             "homepage": "https://github.com/container-interop/container-interop",
             "time": "2017-02-14T19:40:03+00:00"
-        },
-        {
-            "name": "lefuturiste/slim3_multilanguage",
-            "version": "v0.8.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/lefuturiste/slim3_multilanguage.git",
-                "reference": "99da4070a330e68d618e599c8a39435cb8ff3707"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/lefuturiste/slim3_multilanguage/zipball/99da4070a330e68d618e599c8a39435cb8ff3707",
-                "reference": "99da4070a330e68d618e599c8a39435cb8ff3707",
-                "shasum": ""
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "slim3_multilanguage\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Le_Futuriste",
-                    "email": "contact@lefuturiste.fr"
-                }
-            ],
-            "description": "Multilanguage middleware class for slim framework 3",
-            "keywords": [
-                "middleware",
-                "multilanguage",
-                "slim3"
-            ],
-            "abandoned": "https://helgesverre.com/blog/i18n-slim-framework-translation-twig/",
-            "time": "2017-09-05T10:53:38+00:00"
         },
         {
             "name": "monolog/monolog",
