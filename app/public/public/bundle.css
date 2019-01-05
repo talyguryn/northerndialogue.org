@@ -379,6 +379,26 @@ body {
             background-image: url(src/images/flags/ru.svg);
         }
 
+.lang-panel__item--dk {
+          background-image: url(src/images/flags/dk.svg);
+        }
+
+.lang-panel__item--no {
+          background-image: url(src/images/flags/no.svg);
+        }
+
+.lang-panel__item--po {
+          background-image: url(src/images/flags/po.svg);
+        }
+
+.lang-panel__item--se {
+          background-image: url(src/images/flags/se.svg);
+        }
+
+.lang-panel__item--fi {
+          background-image: url(src/images/flags/fi.svg);
+        }
+
 .header {
     display: -webkit-box;
     display: -ms-flexbox;
