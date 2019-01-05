@@ -47,7 +47,11 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: 50px;
+        margin: 50px 0 45px;
+
+        @media (--mobile) {
+            margin-bottom: 30px;
+        }
 
         &-item {
             flex-direction: row;
@@ -87,18 +91,27 @@ body {
     }
 
     &__title {
-        margin: 45px auto 15px;
-        font-size: 34px;
+        margin-bottom: 17px;
+        font-size: 30px;
 
         text-align: center;
 
         @media (--mobile) {
-            margin: 25px auto 15px;
             font-size: 24px;
         }
 
         font-weight: bold;
         color: #0E357B;
+
+        &--forum-name {
+            font-size: 34px;
+
+            @media (--mobile) {
+                font-size: 26px;
+            }
+
+            font-variant: small-caps;
+        }
     }
 }
 
@@ -106,6 +119,7 @@ body {
     display: flex;
     justify-content: center;
     padding: 0;
+    margin-bottom: 20px;
 
     @media (--mobile) {
         flex-direction: column;
@@ -143,6 +157,25 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+}
+
+.welcome-message {
+    max-width: 555px;
+    margin: 20px auto;
+
+    @media (--mobile) {
+        padding: 0 10px;
+    }
+
+    &__title {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    & p {
+        font-size: 14px;
+        line-height: 20px;
+    }
 }
 
 /*.page {*/

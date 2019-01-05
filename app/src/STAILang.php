@@ -34,7 +34,7 @@ class STAILang {
     /**
      * @var string $ext the translation file extention
      */
-    private $ext = ".lang";
+    private $ext = ".json";
 
     const SEARCH = true;
 
@@ -50,9 +50,9 @@ class STAILang {
 
         $this->lang = $lang;
 
-        if (!file_exists($this->folder)) {
-            mkdir($this->folder);
-        }
+//        if (!file_exists($this->folder)) {
+//            mkdir($this->folder);
+//        }
 
 //        if (!file_exists($this->folder . $this->lang . $this->ext)) {
 //            file_put_contents($this->folder . $this->lang . $this->ext, json_encode(array("lang" => $this->lang)));
