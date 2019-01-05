@@ -1,5 +1,10 @@
 @import "~normalize.css";
 
+:root {
+    @custom-media --mobile all and (max-width: 980px);
+    @custom-media --desktop all and (min-width: 981px);
+}
+
 body {
     position: relative;
     max-width: 800px;
@@ -34,6 +39,10 @@ body {
     align-content: center;
     flex-direction: column;
 
+    @media (--mobile) {
+        padding: 0 10px;
+    }
+
     &__logos {
         display: flex;
         justify-content: center;
@@ -43,23 +52,36 @@ body {
         &-item {
             flex-direction: row;
             margin: 0 18px;
+            width: 100px;
+            height: 100px;
+
+            @media (--mobile) {
+                width: 60px;
+                height: 60px;
+            }
+
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
 
             &--mgimo {
-                width: 112px;
-                height: 87px;
                 background-image: url("../images/mgimo-logo.svg");
             }
 
             &--forum {
-                width: 101px;
-                height: 110px;
+                width: 120px;
+                height: 120px;
+
+                @media (--mobile) {
+                    width: 72px;
+                    height: 72px;
+                }
+
                 background-image: url("../images/forum-logo.png");
             }
 
             &--nso {
-                width: 97px;
-                height: 97px;
-                background-image: url("../images/nso-logo.png");
+                background-image: url("../images/nso-logo.svg");
             }
         }
     }
@@ -67,6 +89,14 @@ body {
     &__title {
         margin: 45px auto 15px;
         font-size: 34px;
+
+        text-align: center;
+
+        @media (--mobile) {
+            margin: 25px auto 15px;
+            font-size: 24px;
+        }
+
         font-weight: bold;
         color: #0E357B;
     }
@@ -76,6 +106,11 @@ body {
     display: flex;
     justify-content: center;
     padding: 0;
+
+    @media (--mobile) {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
 
     &__item {
         font-size: 14px;
@@ -94,6 +129,20 @@ body {
             }
         }
     }
+}
+
+.wide-photo {
+    width: 100%;
+    height: 350px;
+
+    @media (--mobile) {
+        height: 160px;
+    }
+
+    background-image: url("../images/wide-photo.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 /*.page {*/

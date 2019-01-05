@@ -47,11 +47,14 @@ module.exports = {
        * Process css files
        */
       {
-        test: /\.pcss$/,
+        test: /\.(pcss|css)$/,
         exclude: [ /node_modules/ ],
         use: ExtractTextPlugin.extract([
           {
             loader: 'css-loader',
+            options: {
+              import: true,
+            },
           },
           {
             loader: 'postcss-loader',
@@ -60,7 +63,7 @@ module.exports = {
                 require('postcss-nested')(),
                 require('postcss-cssnext')(),
                 // require('postcss-inline-svg')(),
-                require('postcss-minimize')()
+                // require('cssnano')()
               ],
               map: false,
             }

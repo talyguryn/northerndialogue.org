@@ -347,4 +347,196 @@ template {
 [hidden] {
   display: none;
 }
-body { position: relative; max-width: 800px; margin: 0 auto; font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif; } .lang-panel { position: absolute; display: inline-block; top: 15px; right: 15px; } .lang-panel__item { margin-left: 10px; display: inline-block; width: 20px; height: 20px; } .lang-panel__item--en { background-image: url(src/images/flags/en.svg); } .lang-panel__item--ru { background-image: url(src/images/flags/ru.svg); } .header { display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-line-pack: center; align-content: center; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; } .header__logos { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; margin-top: 50px; } .header__logos-item { -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; margin: 0 18px; } .header__logos-item--mgimo { width: 112px; height: 87px; background-image: url(src/images/mgimo-logo.svg); } .header__logos-item--forum { width: 101px; height: 110px; background-image: url(src/images/forum-logo.png); } .header__logos-item--nso { width: 97px; height: 97px; background-image: url(src/images/nso-logo.png); } .header__title { margin: 45px auto 15px; font-size: 34px; font-weight: bold; color: #0E357B; } .menu { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; padding: 0; } .menu__item { font-size: 14px; font-weight: bold; letter-spacing: 0.1px; list-style: none; display: inline-block; margin: 0 15px; } .menu__item a { color: black; text-decoration: none; } .menu__item a:hover { text-decoration: underline; }
+:root {
+}
+
+body {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+}
+
+.lang-panel {
+    position: absolute;
+    display: inline-block;
+    top: 15px;
+    right: 15px;
+}
+
+.lang-panel__item {
+        margin-left: 10px;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+    }
+
+.lang-panel__item--en {
+            background-image: url(src/images/flags/en.svg);
+        }
+
+.lang-panel__item--ru {
+            background-image: url(src/images/flags/ru.svg);
+        }
+
+.header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+}
+
+@media all and (max-width: 980px) {
+
+.header {
+        padding: 0 10px
+}
+    }
+
+.header__logos {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        margin-top: 50px;
+    }
+
+.header__logos-item {
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            margin: 0 18px;
+            width: 100px;
+            height: 100px;
+
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+@media all and (max-width: 980px) {
+
+.header__logos-item {
+                width: 60px;
+                height: 60px
+        }
+            }
+
+.header__logos-item--mgimo {
+                background-image: url(src/images/mgimo-logo.svg);
+            }
+
+.header__logos-item--forum {
+                width: 120px;
+                height: 120px;
+
+                background-image: url(src/images/forum-logo.png);
+            }
+
+@media all and (max-width: 980px) {
+
+.header__logos-item--forum {
+                    width: 72px;
+                    height: 72px;
+            }
+                }
+
+.header__logos-item--nso {
+                background-image: url(src/images/nso-logo.svg);
+            }
+
+.header__title {
+        margin: 45px auto 15px;
+        font-size: 34px;
+
+        text-align: center;
+
+        font-weight: bold;
+        color: #0E357B;
+    }
+
+@media all and (max-width: 980px) {
+
+.header__title {
+            margin: 25px auto 15px;
+            font-size: 24px;
+    }
+        }
+
+.menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 0;
+}
+
+@media all and (max-width: 980px) {
+
+.menu {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start
+}
+    }
+
+.menu__item {
+        font-size: 14px;
+        font-weight: bold;
+        letter-spacing: 0.1px;
+        list-style: none;
+        display: inline-block;
+        margin: 0 15px;
+    }
+
+.menu__item a {
+            color: black;
+            text-decoration: none;
+        }
+
+.menu__item a:hover {
+                text-decoration: underline;
+            }
+
+.wide-photo {
+    width: 100%;
+    height: 350px;
+
+    background-image: url(src/images/wide-photo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+@media all and (max-width: 980px) {
+
+.wide-photo {
+        height: 160px;
+}
+    }
+
+/*.page {*/
+    /*margin: 80px auto;*/
+    /*padding: 80px 80px;*/
+    /*max-width: 640px;*/
+    /*min-height: 1050px;*/
+    /*background-color: #fff;*/
+    /*box-shadow: 0 10px 10px #ddd;*/
+/*}*/
