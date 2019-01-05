@@ -646,6 +646,8 @@ body {
             text-align: right;
             color: #7d7d7d;
             white-space: nowrap;
+            padding: 1px;
+            font-size: 14px;
         }
 
 /*.page {*/
