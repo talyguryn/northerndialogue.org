@@ -350,6 +350,10 @@ template {
 :root {
 }
 
+.clearfix {
+  overflow: auto;
+}
+
 body {
     position: relative;
     max-width: 800px;
@@ -488,7 +492,6 @@ body {
         font-size: 30px;
 
         text-align: center;
-
         font-weight: bold;
         color: #0E357B;
     }
@@ -597,6 +600,53 @@ body {
         font-size: 14px;
         line-height: 20px;
     }
+
+.news {
+    max-width: 555px;
+    margin: 40px auto;
+}
+
+@media all and (max-width: 980px) {
+
+.news {
+        padding: 0 10px
+}
+    }
+
+.news__title {
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        display: inline-block;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+.news-item {
+        position: relative;
+        margin-left: 80px;
+        margin-bottom: 20px;
+    }
+
+.news-item__title {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+.news-item__content {
+            font-size: 14px;
+            line-height: 20px;
+        }
+
+.news-item:before {
+            content: attr(data-time);
+            position: absolute;
+            left: -80px;
+            width: 50px;
+            text-align: right;
+            color: #7d7d7d;
+            white-space: nowrap;
+        }
 
 /*.page {*/
     /*margin: 80px auto;*/
