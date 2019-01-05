@@ -5,12 +5,14 @@ use Slim\Http\Response;
 
 // Routes
 
-
 $app->get('/', function (Request $request, Response $response, array $args) {
-    return $this->view->render($response, 'base.twig', [
-        'name' => $args['name']
-    ]);
-});
+    return $this->view->render($response, 'index.twig');
+})->setName('main-page');
+
+$app->get('/news', function (Request $request, Response $response, array $args) {
+    return $this->view->render($response, 'news.twig');
+})->setName('news-page');
+
 
 $app->get('/info', function (Request $request, Response $response, array $args) {
     return phpinfo();

@@ -5,7 +5,7 @@ module.exports = {
   /**
    * Define entry point
    */
-  entry: path.resolve(__dirname, 'src', 'index.js'),
+  entry: path.resolve(__dirname, 'src', 'entry.js'),
 
   /**
    * Set bundle params
@@ -47,7 +47,7 @@ module.exports = {
        * Process css files
        */
       {
-        test: /\.css$/,
+        test: /\.pcss$/,
         exclude: [ /node_modules/ ],
         use: ExtractTextPlugin.extract([
           {
@@ -59,14 +59,29 @@ module.exports = {
               plugins: (loader) => [
                 require('postcss-nested')(),
                 require('postcss-cssnext')(),
-                require('postcss-inline-svg')(),
+                // require('postcss-inline-svg')(),
                 require('postcss-minimize')()
               ],
               map: false,
             }
           }
         ]),
-      }
+      },
+
+      /**
+       * Load assets files
+       */
+      {
+        test: /\.(png|jpg|gif|svg)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[path][name].[ext]',
+            },
+          },
+        ],
+      },
     ]
   },
 

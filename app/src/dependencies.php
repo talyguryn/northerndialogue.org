@@ -1,7 +1,5 @@
 <?php
 
-use App\TwigExtensions;
-
 $container = $app->getContainer();
 
 /**
@@ -82,6 +80,10 @@ $container['view'] = function ($c){
     ]);
 
     $view->addExtension(new App\TwigExtensions($c));
+
+    $router = $c->get('router');
+    $uri = \Slim\Http\Uri::createFromEnvironment(new \Slim\Http\Environment($_SERVER));
+    $view->addExtension(new Slim\Views\TwigExtension($router, $uri));
 
     return $view;
 };

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="content-language" content="{{ lang }}">
+    <title>Skeleton</title>
+    <meta name="description" content="A description of the page" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="{{ filemtime('/public/bundle.css') }}" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="lang-panel">
+        <a href="?lang=en"><span class="lang-panel__item lang-panel__item--en"></span></a>
+        <a href="?lang=ru"><span class="lang-panel__item lang-panel__item--ru"></span></a>
+    </div>
+
+    <div class="header">
+        <div class="header__logos">
+            <div class="header__logos-item header__logos-item--mgimo"></div>
+            <div class="header__logos-item header__logos-item--forum"></div>
+            <div class="header__logos-item header__logos-item--nso"></div>
+        </div>
+        <span class="header__title">{{  dict('Russian-Scandinavian Youth Forum') }}</span>
+    </div>
+
+    <ul class="menu">
+        <li class="menu__item">
+            <a href="{{ path_for('main-page') }}">{{ dict('Main page') }}</a>
+        </li>
+
+        <li class="menu__item">
+            {{ dict('Schedule') }}
+        </li>
+
+        <li class="menu__item">
+            {{ dict('Speakers') }}
+        </li>
+
+        <li class="menu__item">
+            {{ dict('Registration') }}
+        </li>
+
+        <li class="menu__item">
+            <a href="{{ path_for('news-page') }}">{{ dict('News') }}</a>
+        </li>
+    </ul>
+
+    <div class="page">
+        {#<a href="/">{{ dict('Main page') }}</a> <a href="/news">{{ dict('News') }}</a>#}
+
+        {% block content %}{% endblock %}
+    </div>
+
+    <script src="{{ filemtime('/public/bundle.js') }}"></script>
+</body>
+</html>
+

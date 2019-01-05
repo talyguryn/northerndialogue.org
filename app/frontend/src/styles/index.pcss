@@ -1,0 +1,106 @@
+@import "~normalize.css";
+
+body {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+}
+
+.lang-panel {
+    position: absolute;
+    display: inline-block;
+    top: 15px;
+    right: 15px;
+
+    &__item {
+        margin-left: 10px;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+
+        &--en {
+            background-image: url("../images/flags/en.svg");
+        }
+
+        &--ru {
+            background-image: url("../images/flags/ru.svg");
+        }
+    }
+}
+
+.header {
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+
+    &__logos {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+
+        &-item {
+            flex-direction: row;
+            margin: 0 18px;
+
+            &--mgimo {
+                width: 112px;
+                height: 87px;
+                background-image: url("../images/mgimo-logo.svg");
+            }
+
+            &--forum {
+                width: 101px;
+                height: 110px;
+                background-image: url("../images/forum-logo.png");
+            }
+
+            &--nso {
+                width: 97px;
+                height: 97px;
+                background-image: url("../images/nso-logo.png");
+            }
+        }
+    }
+
+    &__title {
+        margin: 45px auto 15px;
+        font-size: 34px;
+        font-weight: bold;
+        color: #0E357B;
+    }
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+
+    &__item {
+        font-size: 14px;
+        font-weight: bold;
+        letter-spacing: 0.1px;
+        list-style: none;
+        display: inline-block;
+        margin: 0 15px;
+
+        & a {
+            color: black;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+/*.page {*/
+    /*margin: 80px auto;*/
+    /*padding: 80px 80px;*/
+    /*max-width: 640px;*/
+    /*min-height: 1050px;*/
+    /*background-color: #fff;*/
+    /*box-shadow: 0 10px 10px #ddd;*/
+/*}*/

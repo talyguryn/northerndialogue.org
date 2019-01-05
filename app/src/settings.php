@@ -24,11 +24,11 @@ return [
             'path' => PROJECT_ROOT . 'logs/hawk.log',
         ],
 
+        // Multilingual settings
         'lang' => [
             'default' => $_ENV['LANG'],
             'available' => [
                 'en',
-                'fr',
                 'ru',
             ],
             'folder' => PROJECT_ROOT . 'lang/',
