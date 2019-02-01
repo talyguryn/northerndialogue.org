@@ -3,20 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="content-language" content="{{ lang }}">
-    <title>Skeleton</title>
-    <meta name="description" content="A description of the page" />
+    <title>{{ title ?: dict('Northern Dialogue') }}</title>
+    <meta name="description" content="{{ dict('Russian-Scandinavian Youth Forum') }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta property="og:title" content>
+    <meta property="og:site_name" content="{{ dict('Northern Dialogue') }}">
+    <meta property="og:image" content="/public/meta-image.png">
+    <meta property="og:type" content="article">
     <link href="{{ filemtime('/public/bundle.css') }}" rel="stylesheet" type="text/css">
 </head>
 <body>
     <div class="lang-panel">
         <a href="?lang=en" class="lang-panel__item lang-panel__item--en"></a>
         <a href="?lang=ru" class="lang-panel__item lang-panel__item--ru"></a>
-        {#<a href="?lang=no" class="lang-panel__item lang-panel__item--no"></a>#}
-        {#<a href="?lang=po" class="lang-panel__item lang-panel__item--po"></a>#}
-        {#<a href="?lang=dk" class="lang-panel__item lang-panel__item--dk"></a>#}
-        {#<a href="?lang=se" class="lang-panel__item lang-panel__item--se"></a>#}
-        {#<a href="?lang=fi" class="lang-panel__item lang-panel__item--fi"></a>#}
     </div>
 
     <div class="header">
@@ -25,8 +24,9 @@
             <div class="header__logos-item header__logos-item--forum"></div>
             <div class="header__logos-item header__logos-item--nso"></div>
         </div>
-        <span class="header__title">{{  dict('Russian-Scandinavian Youth Forum') }}</span>
-        <span class="header__title header__title--forum-name">{{  dict('Northern Dialogue') }}</span>
+
+        <span class="header__title">{{ dict('Russian-Scandinavian Youth Forum') }}</span>
+        <span class="header__title header__title--forum-name">{{ dict('Northern Dialogue') }}</span>
     </div>
 
     <ul class="menu">
@@ -35,27 +35,47 @@
         </li>
 
         <li class="menu__item">
-            {{ dict('Schedule') }}
+            {{ dict('Program') }}
         </li>
 
         <li class="menu__item">
             {{ dict('Speakers') }}
         </li>
 
+        {#<li class="menu__item">#}
+            {#<a href="{{ path_for('news-page') }}">{{ dict('News') }}</a>#}
+        {#</li>#}
+
         <li class="menu__item">
-            {{ dict('Registration') }}
+            <a href="{{ path_for('participation-page') }}">{{ dict('For participants') }}</a>
         </li>
 
         <li class="menu__item">
-            <a href="{{ path_for('news-page') }}">{{ dict('News') }}</a>
+            <a href="{{ path_for('partnership-page') }}">{{ dict('For partners') }}</a>
         </li>
+
+        <li class="menu__item">
+            <a href="{{ path_for('contacts-page') }}">{{ dict('Contacts') }}</a>
+        </li>
+
+        {#<li class="menu__item">#}
+            {#<a href="{{ dict('registration-form-url') }}" target="_blank">{{ dict('Registration') }}</a>#}
+        {#</li>#}
     </ul>
 
-    <div class="page">
+    {% block local_header %}
+        <hr>
+    {% endblock %}
+
+    <div class="page column">
         {% block content %}{% endblock %}
     </div>
 
-    <div class="footer"></div>
+    <div class="footer">
+        <span class="icon--facebook"></span>
+        <span class="icon--facebook"></span>
+        <span class="icon--facebook"></span>
+    </div>
 
     <script src="{{ filemtime('/public/bundle.js') }}"></script>
 </body>

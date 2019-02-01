@@ -5,12 +5,20 @@
   "Hello World!": "Привет, Мир!",
 
   "Main page": "Главная страница",
-  "Schedule": "Расписание",
+  "Program": "Программа",
   "Speakers": "Спикеры",
-  "Registration": "Регистрация",
   "News": "Новости",
+  "For participants": "Участникам",
+  "For partners": "Партнерам",
+  "Contacts": "Контакты",
+  "Registration": "Регистрация",
 
-  "Welcome to the Forum": "Добро пожаловать на форум",
+  "Welcome to the Forum": "Добро пожаловать на Форум",
+  "Join the Forum": "Принять участие в Форуме",
 
-  "Latest news": "Свежие новости"
+  "Latest news": "Свежие новости",
+
+  "registration-form-url": "https://docs.google.com/forms/d/e/1FAIpQLSeE94aXaDN7o3RhfBrnF3mYrKw2H5NnDxaZewwqjqcXev5NQQ/viewform",
+
+  "Partnership": "Партнерство"
 }

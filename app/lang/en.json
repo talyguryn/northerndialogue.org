@@ -5,12 +5,20 @@
   "Hello World!": "Hello World!",
 
   "Main page": "Main page",
-  "Schedule": "Schedule",
+  "Program": "Program",
   "Speakers": "Speakers",
-  "Registration": "Registration",
   "News": "News",
+  "For participants": "For participants",
+  "For partners": "For partners",
+  "Contacts": "Contacts",
+  "Registration": "Registration",
 
   "Welcome to the Forum": "Welcome to the Forum",
+  "Join the Forum": "Join the Forum",
 
-  "Latest news": "Latest news"
+  "Latest news": "Latest news",
+
+  "registration-form-url": "https://docs.google.com/forms/d/e/1FAIpQLScytk6OeW5pkIGPjdpniJXTPAQdOXMl_YjEHbP9xqYMNsr9Bg/viewform",
+
+  "Partnership": "Partnership"
 }

@@ -3,6 +3,10 @@
 :root {
     @custom-media --mobile all and (max-width: 980px);
     @custom-media --desktop all and (min-width: 981px);
+
+    --text-main-color: #0E357B;
+    --button-main-color: #1B86C8;
+    --button-main-hover-color: #1877C8;
 }
 
 .clearfix {
@@ -14,6 +18,24 @@ body {
     max-width: 800px;
     margin: 0 auto;
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+}
+
+ul {
+    margin-bottom: 25px;
+}
+
+li {
+    margin: 10px auto;
+}
+
+hr {
+    box-sizing: content-box;
+    height: 2px;
+    overflow: visible;
+    background: #0E357B;
+    border: 0;
+    margin-bottom: 40px;
+    /* display: none; */
 }
 
 .lang-panel {
@@ -34,26 +56,6 @@ body {
 
         &--ru {
             background-image: url("../images/flags/ru.svg");
-        }
-
-        &--dk {
-          background-image: url("../images/flags/dk.svg");
-        }
-
-        &--no {
-          background-image: url("../images/flags/no.svg");
-        }
-
-        &--po {
-          background-image: url("../images/flags/po.svg");
-        }
-
-        &--se {
-          background-image: url("../images/flags/se.svg");
-        }
-
-        &--fi {
-          background-image: url("../images/flags/fi.svg");
         }
     }
 }
@@ -125,7 +127,7 @@ body {
 
         text-align: center;
         font-weight: bold;
-        color: #0E357B;
+        color: var(--text-main-color);
 
         &--forum-name {
             font-size: 34px;
@@ -170,14 +172,13 @@ body {
 }
 
 .wide-photo {
-    width: 100%;
     height: 350px;
 
     @media (--mobile) {
         height: 160px;
     }
 
-    background-image: url("../images/wide-photo.png");
+    background-image: url("../images/wide-photo.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -194,26 +195,36 @@ body {
     &__title {
         font-size: 20px;
         font-weight: bold;
+        margin: 20px auto 10px;
+        display: inline-block;
     }
 
     & p {
         font-size: 14px;
         line-height: 20px;
     }
+
+    &__registration-button {
+        margin-top: 10px;
+        padding: 10px 20px;
+        color: #fff;
+        background-color: var(--button-main-color);
+        border-radius: 19px;
+        display: inline-block;
+        cursor: pointer;
+        user-select: none;
+
+        &:hover {
+            background-color: var(--button-main-hover-color);
+        }
+    }
 }
 
 .news {
-    max-width: 555px;
-    margin: 40px auto;
-
-    @media (--mobile) {
-        padding: 0 10px;
-    }
-
     &__title {
         font-size: 20px;
         font-weight: bold;
-        text-align: center;
+        margin: 20px auto 10px;
         display: inline-block;
         width: 100%;
         margin-bottom: 30px;
@@ -221,7 +232,7 @@ body {
 
     &-item {
         position: relative;
-        margin-left: 80px;
+        //margin-left: 80px;
         margin-bottom: 20px;
 
         &__title {
@@ -248,11 +259,20 @@ body {
     }
 }
 
-/*.page {*/
-    /*margin: 80px auto;*/
-    /*padding: 80px 80px;*/
-    /*max-width: 640px;*/
-    /*min-height: 1050px;*/
-    /*background-color: #fff;*/
-    /*box-shadow: 0 10px 10px #ddd;*/
-/*}*/
+.page {
+    max-width: 555px;
+    margin: 20px auto;
+
+    @media (--mobile) {
+        padding: 0 10px;
+    }
+    //margin: 40px auto;
+    min-height: 300px;
+}
+
+.footer {
+    height: 200px;
+    background-color: #eee;
+    //border-top: 1px solid #bbb;
+}
+

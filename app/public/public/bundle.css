@@ -361,6 +361,25 @@ body {
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
 }
 
+ul {
+    margin-bottom: 25px;
+}
+
+li {
+    margin: 10px auto;
+}
+
+hr {
+    -webkit-box-sizing: content-box;
+            box-sizing: content-box;
+    height: 2px;
+    overflow: visible;
+    background: #0E357B;
+    border: 0;
+    margin-bottom: 40px;
+    /* display: none; */
+}
+
 .lang-panel {
     position: absolute;
     display: inline-block;
@@ -381,26 +400,6 @@ body {
 
 .lang-panel__item--ru {
             background-image: url(src/images/flags/ru.svg);
-        }
-
-.lang-panel__item--dk {
-          background-image: url(src/images/flags/dk.svg);
-        }
-
-.lang-panel__item--no {
-          background-image: url(src/images/flags/no.svg);
-        }
-
-.lang-panel__item--po {
-          background-image: url(src/images/flags/po.svg);
-        }
-
-.lang-panel__item--se {
-          background-image: url(src/images/flags/se.svg);
-        }
-
-.lang-panel__item--fi {
-          background-image: url(src/images/flags/fi.svg);
         }
 
 .header {
@@ -563,10 +562,9 @@ body {
             }
 
 .wide-photo {
-    width: 100%;
     height: 350px;
 
-    background-image: url(src/images/wide-photo.png);
+    background-image: url(src/images/wide-photo.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -594,6 +592,8 @@ body {
 .welcome-message__title {
         font-size: 20px;
         font-weight: bold;
+        margin: 20px auto 10px;
+        display: inline-block;
     }
 
 .welcome-message p {
@@ -601,22 +601,28 @@ body {
         line-height: 20px;
     }
 
-.news {
-    max-width: 555px;
-    margin: 40px auto;
-}
-
-@media all and (max-width: 980px) {
-
-.news {
-        padding: 0 10px
-}
+.welcome-message__registration-button {
+        margin-top: 10px;
+        padding: 10px 20px;
+        color: #fff;
+        background-color: #1B86C8;
+        border-radius: 19px;
+        display: inline-block;
+        cursor: pointer;
+        -webkit-user-select: none;
+           -moz-user-select: none;
+            -ms-user-select: none;
+                user-select: none;
     }
+
+.welcome-message__registration-button:hover {
+            background-color: #1877C8;
+        }
 
 .news__title {
         font-size: 20px;
         font-weight: bold;
-        text-align: center;
+        margin: 20px auto 10px;
         display: inline-block;
         width: 100%;
         margin-bottom: 30px;
@@ -624,7 +630,7 @@ body {
 
 .news-item {
         position: relative;
-        margin-left: 80px;
+        //margin-left: 80px;
         margin-bottom: 20px;
     }
 
@@ -650,11 +656,23 @@ body {
             font-size: 14px;
         }
 
-/*.page {*/
-    /*margin: 80px auto;*/
-    /*padding: 80px 80px;*/
-    /*max-width: 640px;*/
-    /*min-height: 1050px;*/
-    /*background-color: #fff;*/
-    /*box-shadow: 0 10px 10px #ddd;*/
-/*}*/
+.page {
+    max-width: 555px;
+    margin: 20px auto;
+    //margin: 40px auto;
+    min-height: 300px;
+}
+
+@media all and (max-width: 980px) {
+
+.page {
+        padding: 0 10px;
+}
+    }
+
+.footer {
+    height: 200px;
+    background-color: #eee;
+    //border-top: 1px solid #bbb;
+}
+

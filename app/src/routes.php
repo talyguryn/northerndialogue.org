@@ -6,17 +6,26 @@ use Slim\Http\Response;
 // Routes
 
 $app->get('/', function (Request $request, Response $response, array $args) {
-    return $this->view->render($response, 'index.twig');
+    return $this->view->render($response, 'pages/index.twig');
 })->setName('main-page');
 
-$app->get('/news', function (Request $request, Response $response, array $args) {
-    return $this->view->render($response, 'news.twig');
-})->setName('news-page');
+//$app->get('/news', function (Request $request, Response $response, array $args) {
+//    return $this->view->render($response, 'pages/news.twig');
+//})->setName('news-page');
+
+$app->get('/participation', function (Request $request, Response $response, array $args) {
+    return $this->view->render($response, 'pages/participation.twig');
+})->setName('participation-page');
+
+$app->get('/partnership', function (Request $request, Response $response, array $args) {
+    return $this->view->render($response, 'pages/partnership.twig');
+})->setName('partnership-page');
+
+$app->get('/contacts', function (Request $request, Response $response, array $args) {
+    return $this->view->render($response, 'pages/contacts.twig');
+})->setName('contacts-page');
 
 
-$app->get('/info', function (Request $request, Response $response, array $args) {
-    return phpinfo();
-});
 
 
 //$app->get('/twig/[{name}]', function (Request $request, Response $response, array $args) {
