@@ -3,11 +3,17 @@
 use Slim\Http\Request;
 use Slim\Http\Response;
 
-// Routes
-
 $app->get('/', function (Request $request, Response $response, array $args) {
     return $this->view->render($response, 'pages/index.twig');
 })->setName('main-page');
+
+$app->get('/program', function (Request $request, Response $response, array $args) {
+    return $this->view->render($response, 'pages/program.twig');
+})->setName('program-page');
+
+$app->get('/speakers', function (Request $request, Response $response, array $args) {
+    return $this->view->render($response, 'pages/speakers.twig');
+})->setName('speakers-page');
 
 //$app->get('/news', function (Request $request, Response $response, array $args) {
 //    return $this->view->render($response, 'pages/news.twig');
@@ -24,7 +30,6 @@ $app->get('/partnership', function (Request $request, Response $response, array 
 $app->get('/contacts', function (Request $request, Response $response, array $args) {
     return $this->view->render($response, 'pages/contacts.twig');
 })->setName('contacts-page');
-
 
 
 
