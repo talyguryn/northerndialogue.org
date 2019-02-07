@@ -10,15 +10,31 @@
             {{ dict('Welcome to the Forum') }}
         </span>
 
-        <p><b>Российско-скандинавский молодежный форум «Северный диалог»</b> — это первая в своем роде площадка для всеобъемлющего взаимодействия молодежи России и стран Северной Европы.</p>
+        {% if lang == 'en' %}
 
-        <p><b>«Северный диалог»</b> — это уникальный проект, направленный на установление прочных связей между представителями молодежи России и стран Северной Европы, а также платформа для всестороннего диалога будущих лидеров своих стран.</p>
+            <p>The Russian-Nordic Youth Forum «Northern Dialogue» is a unique platform for comprehensive interaction of the youth of Russia and the countries of Northern Europe. It is an opportunity for constructive dialogue between future leaders of their countries.
 
-        <p>Форум будет проходить с 8 по 12 апреля 2019 года в МГИМО МИД России и объединит как активных молодых людей, так и уже состоявшихся профессионалов, деятельность которых связана с двусторонними отношениями России со странами Северной Европы.</p>
+            <p>«Northern Dialogue» is also aimed at establishing strong ties between young people of Russia and Nordic countries.</p>
 
-        <p>Официальные языки Форума — русский и английский.</p>
+            <p>The Forum will take place on <b>April 8 - 12, 2019</b> at MGIMO-University and will bring together active young people as well as those professionals who are actively involved in the bilateral relations of Russia and the countries of Northern Europe.</p>
 
-        <p>Если Вам небезразлично будущее наших государств и то, как будут развиваться наши двусторонние отношения, то мы ждем Вас в рядах участников первого Российско-скандинавского молодежного форума «Северный диалог»!</p>
+            <p>The official languages of the Forum are <b>English</b> and <b>Russian</b>.</p>
+
+            <p>If you care about the future of our countries and the development of their bilateral relations in particular, you are mostly welcome to take part in the first Russian-Nordic Youth Forum «Northern Dialogue»!</p>
+
+        {% elseif lang == 'ru' %}
+
+            <p>Российско-скандинавский молодежный форум «Северный диалог» — это первая в своем роде площадка для всеобъемлющего взаимодействия молодежи России и стран Северной Европы.</p>
+
+            <p>«Северный диалог» — это уникальный проект, направленный на установление прочных связей между представителями молодежи России и стран Северной Европы, а также платформа для всестороннего диалога будущих лидеров своих стран.</p>
+
+            <p>Форум будет проходить <b>с 8 по 12 апреля 2019 года</b> в МГИМО МИД России и объединит как активных молодых людей, так и уже состоявшихся профессионалов, деятельность которых связана с двусторонними отношениями России со странами Северной Европы.</p>
+
+            <p>Официальные языки Форума — <b>русский</b> и <b>английский</b>.</p>
+
+            <p>Если Вам небезразлично будущее наших государств и то, как будут развиваться наши двусторонние отношения, то мы ждем Вас в рядах участников первого Российско-скандинавского молодежного форума «Северный диалог»!</p>
+
+        {% endif %}
 
         <a href="{{ dict('registration-form-url') }}" target="_blank">
             <span class="welcome-message__registration-button">
