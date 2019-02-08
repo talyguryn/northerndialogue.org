@@ -378,7 +378,7 @@ hr {
     border: 0;
 }
 
-p {
+p, li {
     font-size: 14px;
     line-height: 20px;
 }
@@ -487,23 +487,25 @@ p {
             }
 
 .header__logos-item--forum {
-                width: 120px;
-                height: 120px;
-
                 background-image: url(src/images/forum-logo.png);
             }
-
-@media all and (max-width: 980px) {
-
-.header__logos-item--forum {
-                    width: 72px;
-                    height: 72px;
-            }
-                }
 
 .header__logos-item--nso {
                 background-image: url(src/images/nso-logo.svg);
             }
+
+.header__logos-item--bigger {
+                width: 120px;
+                height: 120px;
+            }
+
+@media all and (max-width: 980px) {
+
+.header__logos-item--bigger {
+                    width: 72px;
+                    height: 72px
+            }
+                }
 
 .header__title {
         margin-bottom: 17px;
