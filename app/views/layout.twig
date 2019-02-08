@@ -64,7 +64,7 @@
     </ul>
 
     {% block local_header %}
-        <hr>
+        <hr class="mb40">
     {% endblock %}
 
     <div class="page column">
@@ -96,13 +96,11 @@
 
             <p>{{ dict('mgimo-name') }}</p>
 
-            <p>
-                <a href="https://maps.google.com/?daddr=MGIMO" target="_blank">{{ dict('mgimo-address') }}</a>
-            </p>
+            <p><a href="https://maps.google.com/?daddr=MGIMO" target="_blank">{{ dict('mgimo-address') }}</a></p>
         </div>
     </div>
 
-    <script src="{{ filemtime('/public/bundle.js') }}"></script>
+    {#<script src="{{ filemtime('/public/bundle.js') }}"></script>#}
 </body>
 </html>
 
