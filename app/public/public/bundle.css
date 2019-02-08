@@ -377,7 +377,11 @@ hr {
     background: #0E357B;
     border: 0;
     margin-bottom: 40px;
-    /* display: none; */
+}
+
+p {
+    font-size: 14px;
+    line-height: 20px;
 }
 
 .column {
@@ -598,12 +602,6 @@ hr {
     }
 
 
-.welcome-message p {
-        font-size: 14px;
-        line-height: 20px;
-    }
-
-
 .welcome-message__registration-button {
         margin-top: 10px;
         padding: 10px 20px;
@@ -664,22 +662,44 @@ hr {
     min-height: 300px;
 }
 
+.footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+
+@media all and (max-width: 980px) {
+
+.footer {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start
+}
+    }
+
 .footer__name {}
 
-.footer__contacts {
+.footer__event {
         max-width: 250px;
     }
 
-.footer__contacts a {
-            color: black;
-            text-decoration: none;
-        }
-
-.footer__contacts a:hover {
-                text-decoration: underline;
-            }
-
 .footer__icons {}
+
+.footer a {
+        color: black;
+        //text-decoration: none;
+    }
+
+.footer a:hover {
+            text-decoration: underline;
+        }
 
 .icon {
     display: inline-block;

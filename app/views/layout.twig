@@ -74,21 +74,31 @@
     <hr>
 
     <div class="footer column">
-        <div class="footer__name">
-            <b>«{{ dict('Northern Dialogue') }}»</b>
+        <div>
+            <p class="footer__name">
+                <b>«{{ dict('Northern Dialogue') }}»</b>
+            </p>
+
+            <p class="footer__icons">
+                <a href="#"><span class="icon icon--facebook"></span></a>
+                <a href="#"><span class="icon icon--twitter"></span></a>
+                <a href="#"><span class="icon icon--vk"></span></a>
+                <a href="#"><span class="icon icon--instagram"></span></a>
+            </p>
+
+            <p>
+                <a href="mailto:northerndialogue@mail.ru">northerndialogue@mail.ru</a>
+            </p>
         </div>
 
-        <div class="footer__contacts">
-            <p>{{ dict('mgimo-address') }}</p>
+        <div class="footer__event">
+            <p>{{ dict('event-date') }}</p>
 
-            <p><a href="mailto:northerndialogue@mail.ru">northerndialogue@mail.ru</a></p>
-        </div>
+            <p>{{ dict('mgimo-name') }}</p>
 
-        <div class="footer__icons">
-            <a href="#"><span class="icon icon--facebook"></span></a>
-            <a href="#"><span class="icon icon--twitter"></span></a>
-            <a href="#"><span class="icon icon--vk"></span></a>
-            <a href="#"><span class="icon icon--instagram"></span></a>
+            <p>
+                <a href="https://maps.google.com/?daddr=MGIMO" target="_blank">{{ dict('mgimo-address') }}</a>
+            </p>
         </div>
     </div>
 

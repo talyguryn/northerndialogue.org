@@ -94,8 +94,7 @@ var app =
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-eval("\n\n/**\n * Require CSS\n */\n__webpack_require__(/*! ./styles/index.pcss */ \"./src/styles/index.pcss\");\n/**\n * Require JS\n */\n\n\n__webpack_require__(/*! ./scripts/index */ \"./src/scripts/index.js\");\n\n//# sourceURL=webpack://app/./src/entry.js?");
+eval("/**\n * Require CSS\n */\n__webpack_require__(/*! ./styles/index.pcss */ \"./src/styles/index.pcss\");\n/**\n * Require JS\n */\n\n\n__webpack_require__(/*! ./scripts/index */ \"./src/scripts/index.js\");\n\n//# sourceURL=webpack://app/./src/entry.js?");
 
 /***/ }),
 
@@ -104,10 +103,9 @@ eval("\n\n/**\n * Require CSS\n */\n__webpack_require__(/*! ./styles/index.pcss 
   !*** ./src/scripts/index.js ***!
   \******************************/
 /*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-eval("\n\nconsole.log('Hey');\n\n//# sourceURL=webpack://app/./src/scripts/index.js?");
+eval("console.log('Hey');\n\n//# sourceURL=webpack://app/./src/scripts/index.js?");
 
 /***/ }),
 

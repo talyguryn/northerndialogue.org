@@ -35,7 +35,11 @@ hr {
     background: #0E357B;
     border: 0;
     margin-bottom: 40px;
-    /* display: none; */
+}
+
+p {
+    font-size: 14px;
+    line-height: 20px;
 }
 
 .column {
@@ -202,11 +206,6 @@ hr {
         display: inline-block;
     }
 
-    & p {
-        font-size: 14px;
-        line-height: 20px;
-    }
-
     &__registration-button {
         margin-top: 10px;
         padding: 10px 20px;
@@ -267,22 +266,30 @@ hr {
 }
 
 .footer {
+    display: flex;
+    justify-content: space-between;
+
+    @media (--mobile) {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
     &__name {}
 
-    &__contacts {
+    &__event {
         max-width: 250px;
-
-        & a {
-            color: black;
-            text-decoration: none;
-
-            &:hover {
-                text-decoration: underline;
-            }
-        }
     }
 
     &__icons {}
+
+    & a {
+        color: black;
+        //text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
 }
 
 .icon {
