@@ -18,8 +18,9 @@
 
   "Latest news": "Свежие новости",
 
-  "registration-form-url": "https://docs.google.com/forms/d/e/1FAIpQLSeE94aXaDN7o3RhfBrnF3mYrKw2H5NnDxaZewwqjqcXev5NQQ/viewform",
-
   "Participation": "Участие",
-  "Partnership": "Партнерство"
+  "Partnership": "Партнерство",
+
+  "registration-form-url": "https://docs.google.com/forms/d/e/1FAIpQLSeE94aXaDN7o3RhfBrnF3mYrKw2H5NnDxaZewwqjqcXev5NQQ/viewform",
+  "mgimo-address": "Проспект Вернадского д. 76, Москва, 119454"
 }

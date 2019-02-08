@@ -71,10 +71,25 @@
         {% block content %}{% endblock %}
     </div>
 
-    <div class="footer">
-        <span class="icon--facebook"></span>
-        <span class="icon--facebook"></span>
-        <span class="icon--facebook"></span>
+    <hr>
+
+    <div class="footer column">
+        <div class="footer__name">
+            <b>«{{ dict('Northern Dialogue') }}»</b>
+        </div>
+
+        <div class="footer__contacts">
+            <p>{{ dict('mgimo-address') }}</p>
+
+            <p><a href="mailto:northerndialogue@mail.ru">northerndialogue@mail.ru</a></p>
+        </div>
+
+        <div class="footer__icons">
+            <a href="#"><span class="icon icon--facebook"></span></a>
+            <a href="#"><span class="icon icon--twitter"></span></a>
+            <a href="#"><span class="icon icon--vk"></span></a>
+            <a href="#"><span class="icon icon--instagram"></span></a>
+        </div>
     </div>
 
     <script src="{{ filemtime('/public/bundle.js') }}"></script>
