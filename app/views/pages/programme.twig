@@ -3,14 +3,97 @@
 {% set title = ruseng('Программа', 'Programme') %}
 
 {% block content %}
-    <h1>{{ title }}</h1>
+    {#<h1>{{ title }}</h1>#}
 
-    <div>{{ ruseng('Основная программа', 'Main programme') }}</div>
-    <div>{{ ruseng('Культурная программа', 'Social programme') }}</div>
+    {#<div>{{ ruseng('Основная программа', 'Main programme') }}</div>#}
+    {#<div>{{ ruseng('Культурная программа', 'Social programme') }}</div>#}
 
-    {% if lang == 'en' %}
-        ...
-    {% elseif lang == 'ru' %}
-        ...
-    {% endif %}
+    {#{% if lang == 'en' %}#}
+        {#...#}
+    {#{% elseif lang == 'ru' %}#}
+        {#...#}
+    {#{% endif %}#}
+
+    <h2>{{ ruseng('Основная программа', 'Main programme') }}</h2>
+
+    <div class="table">
+        <div class="table__row">
+            <div class="table__cell table__cell--title table__cell--small">{{ ruseng('Дата', 'Date') }}</div>
+            <div class="table__cell table__cell--title">{{ ruseng('Формат', 'Format') }}</div>
+            <div class="table__cell table__cell--title">{{ ruseng('Спикеры и гости', 'Speakers and guests') }}</div>
+        </div>
+        <div class="table__row">
+            <div class="table__cell table__cell--small">8.04.19</div>
+            <div class="table__cell">{{ ruseng('Панельная дискуссия «Политическое сотрудничество»', 'Panel discussion «Political Cooperation»') }}</div>
+            <div class="table__cell">{{ ruseng('Представители МИД России, посольств Скандинавских стран, политики и общественные деятели.', 'Representatives of the Russian Foreign Ministry, embassies of the Nordic countries, politicians and public figures.') }}</div>
+        </div>
+        <div class="table__row">
+            <div class="table__cell table__cell--small">9.04.19</div>
+            <div class="table__cell">{{ ruseng('Панельная дискуссия «Сотрудничество в сфере экономики и энергетики»', 'Panel discussion «Economic and Energy Cooperation»') }}</div>
+            <div class="table__cell">{{ ruseng('Представители Скандинавских компаний, ведущих деятельность в России, молодые предприниматели, представители Минпромторга и Минэнерго России.', 'Representatives of Nordic companies operating in Russia, young entrepreneurs, representatives of the Ministry of Industry and Trade of Russia and the Ministry of Energy of Russia.') }}</div>
+        </div>
+        <div class="table__row">
+            <div class="table__cell table__cell--small">10.04.19</div>
+            <div class="table__cell">{{ ruseng('Панельная дискуссия «Сотрудничество в области экологии и охраны окружающей среды»', 'Panel discussion «Environmental Cooperation»') }}</div>
+            <div class="table__cell">{{ ruseng('Представители общественных организаций, специализирующихся на природоохранной деятельности, общественные деятели, специалисты в области экологии и устойчивого развития.', 'Representatives of public organizations specializing in environmental activities, public figures, experts in the field of ecology and sustainable development.') }}</div>
+        </div>
+        <div class="table__row">
+            <div class="table__cell table__cell--small">11.04.19</div>
+            <div class="table__cell">{{ ruseng('Панельная дискуссия «Культурное сотрудничество»', 'Panel discussion «Cultural Exchange»') }}</div>
+            <div class="table__cell">{{ ruseng('Российские и Скандинавские культурные и общественные деятели, писатели, представители блогосферы.', 'Russian and Nordic writers, directors, artists etc.') }}</div>
+        </div>
+        <div class="table__row">
+            <div class="table__cell table__cell--small">12.04.19</div>
+            <div class="table__cell">{{ ruseng('Молодежный день. Модель СГБМ', 'The Youth Day. Model CBSS (The Council of the Baltic Sea States)') }}</div>
+            <div class="table__cell">{{ ruseng('Представители молодежи России и Скандинавии.', 'Representatives of the youth of Russia and Scandinavia.') }}</div>
+        </div>
+        {#<div class="table__row">#}
+            {#<div class="table__cell"></div>#}
+            {#<div class="table__cell">{{ ruseng('', '') }}</div>#}
+            {#<div class="table__cell">{{ ruseng('', '') }}</div>#}
+        {#</div>#}
+    </div>
+
+    <h2>{{ ruseng('Культурная программа', 'Social programme') }}</h2>
+
+    <div class="table">
+        <div class="table__row">
+            <div class="table__cell table__cell--title table__cell--small">{{ ruseng('Дата', 'Date') }}</div>
+            <div class="table__cell table__cell--title">{{ ruseng('Мероприятие', 'Event') }}</div>
+        </div>
+        <div class="table__row">
+            <div class="table__cell table__cell--small">7.04.19</div>
+            <div class="table__cell">{{ ruseng('Social workshops for the participants') }}</div>
+        </div>
+        <div class="table__row">
+            <div class="table__cell table__cell--small">8.04.19</div>
+            <div class="table__cell">{{ ruseng('Excursion to the centre of Moscow and along the embankments of the Moscow River') }}</div>
+        </div>
+        <div class="table__row">
+            <div class="table__cell table__cell--small">9.04.19</div>
+            <div class="table__cell">{{ ruseng('Excursion to the Tretyakov State Art Gallery') }}</div>
+        </div>
+        <div class="table__row">
+            <div class="table__cell table__cell--small">10.04.19</div>
+            <div class="table__cell">{{ ruseng('Excursion to the Kremlin and Red Square, a visit to «Zaryadye» Park') }}</div>
+        </div>
+        <div class="table__row">
+            <div class="table__cell table__cell--small">11.04.19</div>
+            <div class="table__cell">{{ ruseng('Excursion to the «Garage» Museum and a visit to Gorky Park') }}</div>
+        </div>
+        <div class="table__row">
+            <div class="table__cell table__cell--small">12.04.19</div>
+            <div class="table__cell">{{ ruseng('Excursion to Arbat street and its district') }}</div>
+        </div>
+        <div class="table__row">
+            <div class="table__cell table__cell--small">13.04.19</div>
+            <div class="table__cell">{{ ruseng('Excursion to the Tsaritsyno Museum-Reserve. A theatre visit in the evening.') }}</div>
+        </div>
+        {#<div class="table__row">#}
+        {#<div class="table__cell"></div>#}
+        {#<div class="table__cell">{{ ruseng('', '') }}</div>#}
+        {#<div class="table__cell">{{ ruseng('', '') }}</div>#}
+        {#</div>#}
+    </div>
+
 {% endblock %}

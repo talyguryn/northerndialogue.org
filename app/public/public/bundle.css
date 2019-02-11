@@ -794,3 +794,44 @@ h1, h2, h3 {
             border-width: 10px;
             border-color: transparent transparent transparent #1B86C8;
         }
+
+.table {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    //justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+}
+
+.table__row {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        border-bottom: 1px solid #eee;
+    }
+
+.table__cell {
+        width: 100%;
+        margin: 1px;
+        padding: 5px;
+    }
+
+.table__cell--title {
+            font-weight: 800;
+        }
+
+.table__cell--small {
+            max-width: 80px;
+        }
