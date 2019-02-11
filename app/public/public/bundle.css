@@ -769,8 +769,7 @@ h1, h2, h3 {
 
 .about-scheme__arrow {
         height: 10px;
-        width: 100%;
-        max-width: 100px;
+        width: 50px;
         margin: auto 20px;
         background-color: #1B86C8;
         position: relative;
