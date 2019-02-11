@@ -522,9 +522,17 @@ h1, h2, h3 {
 
 .header__logos-item--nso {
                 background-image: url(src/images/nso-logo.svg);
-                //width: 90px;
-                //height: 90px;
+                width: 80px;
+                height: 80px;
             }
+
+@media all and (max-width: 980px) {
+
+.header__logos-item--nso {
+                    width: 50px;
+                    height: 50px
+            }
+                }
 
 .header__logos-item--bigger {
                 width: 120px;
