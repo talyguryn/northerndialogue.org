@@ -3,13 +3,26 @@
 {% set title = ruseng('Оргкомитет', 'Organizing Committee') %}
 
 {% block content %}
-    <h1>{{ ruseng('Оргкомитет', 'Organizing Committee') }}</h1>
+    <h2>{{ ruseng('Огранизаторы', 'Organizers') }}</h2>
 
     {% if lang == 'en' %}
-        ...
+        <p><b>Scandinavian Club MGIMO Nordlys</b> is a student-led public organization founded by students at MGIMO-University in November 2016. The main objectives of the Club are comprehensive research of Northern Europe, including political, economic, cultural and historical aspects as well as strengthening and developing youth relations between Russia and the countries of the region.</p>
+
+        <p>Scandinavian Club is one of the fastest evolving student organizations at MGIMO-University. The members of the Club are more than 30 students from all faculties of MGIMO-University and representatives from other Moscow Universities, such as HSE and MSLU.</p>
+
+        <p>Throughout its functioning, the Club has organized more than 20 scientific and cultural events, including conferences, round tables, lectures, business games, etc.</p>
+
+        <p>Official web-page: <a href="https://vk.com/scandinavianclubmgimo" target="_blank">vk.com/scandinavianclubmgimo</a></p>
     {% elseif lang == 'ru' %}
-        ...
+        <p><b>Скандинавский клуб МГИМО Nordlys</b> – студенческая общественная организация, созданная студентами МГИМО МИД России в ноябре 2016 года. Основными целями клуба являются комплексное исследование Северной Европы, включая политические, экономические, правовые, культурные и исторические аспекты, а также укрепление и развитие молодежных связей между Россией и странами региона.</p>
+
+        <p>Скандинавский клуб является одной из самых быстроразвивающихся студенческих организаций МГИМО, в актив которой входят более 30 студентов со всех факультетов университета, а также представители других московских ВУЗов, среди которых НИУ ВШЭ и МГЛУ.</p>
+
+        <p>За время своего существования клубом было организовано более 20 мероприятий как научной, так и культурной направленности, в том числе конференции, круглые столы, лекции, деловые игры и т.д.</p>
+
+        <p>Официальная страница: <a href="https://vk.com/scandinavianclubmgimo" target="_blank">vk.com/scandinavianclubmgimo</a></p>
     {% endif %}
 
+    {#<h2>{{ ruseng('Организационный комитет', 'Organizing Committe') }}</h2>#}
 
 {% endblock %}

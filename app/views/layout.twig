@@ -49,6 +49,8 @@
             <a href="{{ path_for('speakers-page') }}">{{ ruseng('Спикеры', 'Speakers') }}</a>
         </li>
 
+    </ul>
+    <ul class="menu">
         <li class="menu__item">
             <a href="{{ path_for('participation-page') }}">{{ ruseng('Участникам', 'For participants') }}</a>
         </li>
@@ -57,13 +59,13 @@
             <a href="{{ path_for('partnership-page') }}">{{ ruseng('Партнерам', 'For partners') }}</a>
         </li>
 
-        {#<li class="menu__item">#}
-            {#<a href="{{ path_for('organizers-page') }}">{{ ruseng('Оргкомитет', 'Organizing Committe') }}</a>#}
-        {#</li>#}
+        <li class="menu__item">
+            <a href="{{ path_for('organizers-page') }}">{{ ruseng('Оргкомитет', 'Organizing Committe') }}</a>
+        </li>
 
-        {#<li class="menu__item">#}
-            {#<a href="{{ path_for('contacts-page') }}">{{ ruseng('Контакты', 'Contacts') }}</a>#}
-        {#</li>#}
+        <li class="menu__item">
+            <a href="{{ path_for('contacts-page') }}">{{ ruseng('Контакты', 'Contacts') }}</a>
+        </li>
     </ul>
 
     {% block local_header %}
