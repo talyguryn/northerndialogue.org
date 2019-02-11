@@ -359,6 +359,7 @@ body {
     max-width: 800px;
     margin: 0 auto;
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+    line-height: 1.5em;
 }
 
 ul {
@@ -378,13 +379,35 @@ hr {
     border: 0;
 }
 
-p, li {
-    font-size: 14px;
-    line-height: 20px;
-}
+h1, h2, h3 { margin-top: 1em; }
 
 .mb40 {
     margin-bottom: 40px;
+}
+
+
+
+.df {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.jcc {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+.tdn {
+    text-decoration: none;
+}
+
+.usn {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .column {
@@ -492,6 +515,8 @@ p, li {
 
 .header__logos-item--nso {
                 background-image: url(src/images/nso-logo.svg);
+                //width: 90px;
+                //height: 90px;
             }
 
 .header__logos-item--bigger {
@@ -599,68 +624,36 @@ p, li {
     }
 
 
-.welcome-message__title {
-        font-size: 20px;
-        font-weight: bold;
-        margin: 20px auto 10px;
-        display: inline-block;
-    }
+.registration-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #1B86C8;
+    border-radius: 22px;
+    display: inline-block;
+    cursor: pointer;
+}
 
 
-.welcome-message__registration-button {
-        margin-top: 10px;
-        padding: 10px 20px;
-        color: #fff;
-        background-color: #1B86C8;
-        border-radius: 19px;
-        display: inline-block;
-        cursor: pointer;
-        -webkit-user-select: none;
-           -moz-user-select: none;
-            -ms-user-select: none;
-                user-select: none;
-    }
-
-
-.welcome-message__registration-button:hover {
-            background-color: #1877C8;
-        }
-
-.news__title {
-        font-size: 20px;
-        font-weight: bold;
-        margin: 20px auto 10px;
-        display: inline-block;
-        width: 100%;
-        margin-bottom: 30px;
+.registration-button:hover {
+        background-color: #1877C8;
     }
 
 .news-item {
-        position: relative;
-        //margin-left: 80px;
         margin-bottom: 20px;
     }
 
-.news-item__title {
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
 .news-item__content {
-            font-size: 14px;
-            line-height: 20px;
+        //    font-size: 14px;
+        //    line-height: 20px;
         }
 
 .news-item:before {
             content: attr(data-time);
-            position: absolute;
-            left: -80px;
-            width: 50px;
-            text-align: right;
+            display: block;
             color: #7d7d7d;
             white-space: nowrap;
-            padding: 1px;
-            font-size: 14px;
+            font-size: 0.8em;
         }
 
 .page {

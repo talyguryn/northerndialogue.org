@@ -5,57 +5,73 @@
 {% endblock %}
 
 {% block content %}
-    <div class="welcome-message">
-        <span class="welcome-message__title">
-            {{ dict('Welcome to the Forum') }}
+    <h1>{{ ruseng('Добро пожаловать на Форум', 'Welcome to the Forum') }}</h1>
+
+    {% if lang == 'en' %}
+
+        <p>The Russian-Nordic Youth Forum «Northern Dialogue» is a unique platform for comprehensive interaction of the youth of Russia and the countries of Northern Europe. It is an opportunity for constructive dialogue between future leaders of their countries.
+
+        <p>«Northern Dialogue» is also aimed at establishing strong ties between young people of Russia and Nordic countries.</p>
+
+        <p>The Forum will take place on <b>April 8 - 12, 2019</b> at MGIMO-University and will bring together active young people as well as those professionals who are actively involved in the bilateral relations of Russia and the countries of Northern Europe.</p>
+
+        <p>The official languages of the Forum are <b>English</b> and <b>Russian</b>.</p>
+
+        <p>If you care about the future of our countries and the development of their bilateral relations in particular, you are mostly welcome to take part in the first Russian-Nordic Youth Forum «Northern Dialogue»!</p>
+
+    {% elseif lang == 'ru' %}
+
+        <p>Российско-скандинавский молодежный форум «Северный диалог» — это первая в своем роде площадка для всеобъемлющего взаимодействия молодежи России и стран Северной Европы.</p>
+
+        <p>«Северный диалог» — это уникальный проект, направленный на установление прочных связей между представителями молодежи России и стран Северной Европы, а также платформа для всестороннего диалога будущих лидеров своих стран.</p>
+
+        <p>Форум будет проходить <b>с 8 по 12 апреля 2019 года</b> в МГИМО МИД России и объединит как активных молодых людей, так и уже состоявшихся профессионалов, деятельность которых связана с двусторонними отношениями России со странами Северной Европы.</p>
+
+        <p>Официальные языки Форума — <b>русский</b> и <b>английский</b>.</p>
+
+        <p>Если Вам небезразлично будущее наших государств и то, как будут развиваться наши двусторонние отношения, то мы ждем Вас в рядах участников первого Российско-скандинавского молодежного форума «Северный диалог»!</p>
+    {% endif %}
+
+    <h2>{{ ruseng('Об Организаторе', 'About the Organizer') }}</h2>
+
+    {% if lang == 'en' %}
+        <p><b>Scandinavian Club MGIMO Nordlys</b> (Norw. «northern lights») is a student-run organization at MGIMO-University founded in order to provide students with an opportunity to explore Scandinavian region, policies, economies and legal systems of Nordic countries and their relations with Russia. The Club`s activity is aimed at establishing strong ties with the countries of the region in various areas.</p>
+    {% elseif lang == 'ru' %}
+        <p><b>Скандинавский клуб МГИМО Nordlys</b> (норв. «северное сияние») — это студенческое объединение в рамках МГИМО МИД России, созданное с целью предоставить обучающимся возможность всестороннего изучения Скандинавского региона, политики, экономики и права скандинавских стран и их взаимоотношений с Российской Федерацией и другими странами и регионами мира, а также с целью способствовать укреплению и развитию диалога Российской Федерации со странами региона и установлению прочных связей в различных сферах деятельности.</p>
+    {% endif %}
+
+    <a href="{{ dict('registration-form-url') }}" target="_blank" class="df jcc tdn usn">
+        <span class="registration-button">
+            {{ ruseng('Зарегистироваться', 'Apply now') }}
         </span>
+    </a>
 
-        {% if lang == 'en' %}
+    <h2>{{ ruseng('Топовые спикеры', 'Top speakers') }}</h2>
 
-            <p>The Russian-Nordic Youth Forum «Northern Dialogue» is a unique platform for comprehensive interaction of the youth of Russia and the countries of Northern Europe. It is an opportunity for constructive dialogue between future leaders of their countries.
+    {% if lang == 'en' %}
+        ...
+    {% elseif lang == 'ru' %}
+        ...
+    {% endif %}
 
-            <p>«Northern Dialogue» is also aimed at establishing strong ties between young people of Russia and Nordic countries.</p>
+    <h2>{{ ruseng('Свежие новости', 'Latest news') }}</h2>
 
-            <p>The Forum will take place on <b>April 8 - 12, 2019</b> at MGIMO-University and will bring together active young people as well as those professionals who are actively involved in the bilateral relations of Russia and the countries of Northern Europe.</p>
+    <div class="news">
+        {% set news = [
+            {
+                date: ruseng('11 Февраля', 'Feb 11th'),
+                text: ruseng('Рады приветствовать гостей сайта.', 'We are pleased to welcome guests of the site.')
+            },
+            {
+                date: ruseng('25 Января', 'Jan 25th'),
+                text: ruseng('Регистрация открыта!', 'Resgistration is open now!')
+            }
+        ] %}
 
-            <p>The official languages of the Forum are <b>English</b> and <b>Russian</b>.</p>
-
-            <p>If you care about the future of our countries and the development of their bilateral relations in particular, you are mostly welcome to take part in the first Russian-Nordic Youth Forum «Northern Dialogue»!</p>
-
-        {% elseif lang == 'ru' %}
-
-            <p>Российско-скандинавский молодежный форум «Северный диалог» — это первая в своем роде площадка для всеобъемлющего взаимодействия молодежи России и стран Северной Европы.</p>
-
-            <p>«Северный диалог» — это уникальный проект, направленный на установление прочных связей между представителями молодежи России и стран Северной Европы, а также платформа для всестороннего диалога будущих лидеров своих стран.</p>
-
-            <p>Форум будет проходить <b>с 8 по 12 апреля 2019 года</b> в МГИМО МИД России и объединит как активных молодых людей, так и уже состоявшихся профессионалов, деятельность которых связана с двусторонними отношениями России со странами Северной Европы.</p>
-
-            <p>Официальные языки Форума — <b>русский</b> и <b>английский</b>.</p>
-
-            <p>Если Вам небезразлично будущее наших государств и то, как будут развиваться наши двусторонние отношения, то мы ждем Вас в рядах участников первого Российско-скандинавского молодежного форума «Северный диалог»!</p>
-
-        {% endif %}
-
-        <a href="{{ dict('registration-form-url') }}" target="_blank">
-            <span class="welcome-message__registration-button">
-                {{ dict('Join the Forum') }}
-            </span>
-        </a>
+        {% for news_item in news %}
+            <div class="news-item" data-time="{{ news_item.date }}">
+                {{ news_item.text }}
+            </div>
+        {% endfor %}
     </div>
-
-    {#<div class="news">#}
-        {#<div class="news__title">{{ dict('Latest news') }}</div>#}
-
-        {#{% for i in 1..3 %}#}
-            {#<div class="news-item" data-time="Jan 18th">#}
-                {#<div class="news-item__title">#}
-                    {#Join the Forum — registration is open#}
-                {#</div>#}
-
-                {#<div class="news-item__content">#}
-                    {#Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.#}
-                {#</div>#}
-            {#</div>#}
-        {#{% endfor %}#}
-    {#</div>#}
 {% endblock %}

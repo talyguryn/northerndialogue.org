@@ -23,11 +23,12 @@ class TwigExtensions extends TwigExtension {
         return [
             new \Twig_SimpleFunction('dict', array($this, 'dict')),
             new \Twig_SimpleFunction('filemtime', array($this, 'filemtime')),
+            new \Twig_SimpleFunction('ruseng', array($this, 'ruseng')),
         ];
     }
 
     public function dict($phrase) {
-        return $this->container->dictionary[$phrase] ?? $phrase;
+        return $this->container->dictionary[$phrase] ?: $phrase;
     }
 
     /**
@@ -45,5 +46,13 @@ class TwigExtensions extends TwigExtension {
         }
 
         return $file_path . '?v=' . $change_date;
+    }
+
+    public function ruseng($russianPhrase, $englishPhrase = "") {
+        if ($englishPhrase) {
+            return $this->container->lang == 'ru' ? $russianPhrase : $englishPhrase;
+        }
+
+        return $russianPhrase;
     }
 }

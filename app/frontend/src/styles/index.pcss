@@ -18,6 +18,7 @@ body {
     max-width: 800px;
     margin: 0 auto;
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+    line-height: 1.5em;
 }
 
 ul {
@@ -36,13 +37,31 @@ hr {
     border: 0;
 }
 
-p, li {
-    font-size: 14px;
-    line-height: 20px;
-}
+h1, h2, h3 { margin-top: 1em; }
 
 .mb40 {
     margin-bottom: 40px;
+}
+
+
+
+.df {
+    display: flex;
+}
+
+.jcc {
+    justify-content: center;
+}
+
+.tdn {
+    text-decoration: none;
+}
+
+.usn {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .column {
@@ -120,6 +139,8 @@ p, li {
 
             &--nso {
                 background-image: url("../images/nso-logo.svg");
+                //width: 90px;
+                //height: 90px;
             }
 
             &--bigger {
@@ -203,65 +224,36 @@ p, li {
 }
 
 
-.welcome-message {
-    &__title {
-        font-size: 20px;
-        font-weight: bold;
-        margin: 20px auto 10px;
-        display: inline-block;
-    }
+.registration-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: var(--button-main-color);
+    border-radius: 22px;
+    display: inline-block;
+    cursor: pointer;
 
-    &__registration-button {
-        margin-top: 10px;
-        padding: 10px 20px;
-        color: #fff;
-        background-color: var(--button-main-color);
-        border-radius: 19px;
-        display: inline-block;
-        cursor: pointer;
-        user-select: none;
-
-        &:hover {
-            background-color: var(--button-main-hover-color);
-        }
+    &:hover {
+        background-color: var(--button-main-hover-color);
     }
 }
 
 .news {
-    &__title {
-        font-size: 20px;
-        font-weight: bold;
-        margin: 20px auto 10px;
-        display: inline-block;
-        width: 100%;
-        margin-bottom: 30px;
-    }
 
     &-item {
-        position: relative;
-        //margin-left: 80px;
         margin-bottom: 20px;
 
-        &__title {
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
         &__content {
-            font-size: 14px;
-            line-height: 20px;
+        //    font-size: 14px;
+        //    line-height: 20px;
         }
 
         &:before {
             content: attr(data-time);
-            position: absolute;
-            left: -80px;
-            width: 50px;
-            text-align: right;
+            display: block;
             color: #7d7d7d;
             white-space: nowrap;
-            padding: 1px;
-            font-size: 14px;
+            font-size: 0.8em;
         }
     }
 }

@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="content-language" content="{{ lang }}">
-    <title>{{ title ?: dict('Northern Dialogue') }}</title>
-    <meta name="description" content="{{ dict('Russian-Scandinavian Youth Forum') }}" />
+
+    <title>{{ title ?: ruseng('Северный Диалог', 'Northern Dialogue') }}</title>
+    <meta name="description" content="{{ ruseng('Российско-скандинавский молодежный форум', 'Russian-Scandinavian Youth Forum') }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
     <meta property="og:title" content>
-    <meta property="og:site_name" content="{{ dict('Northern Dialogue') }}">
+    <meta property="og:site_name" content="{{ ruseng('Северный Диалог', 'Northern Dialogue') }}">
     <meta property="og:image" content="/public/meta-image.png">
     <meta property="og:type" content="article">
+
     <link href="{{ filemtime('/public/bundle.css') }}" rel="stylesheet" type="text/css">
 </head>
 <body>
@@ -20,42 +23,42 @@
 
     <div class="header">
         <div class="header__logos">
-            <div class="header__logos-item header__logos-item--forum"></div>
+            <div class="header__logos-item header__logos-item--nso"></div>
+            <div class="header__logos-item header__logos-item--forum header__logos-item--bigger"></div>
             <div class="header__logos-item header__logos-item--mgimo"></div>
-            {#<div class="header__logos-item header__logos-item--nso"></div>#}
         </div>
 
-        <span class="header__title">{{ dict('Russian-Scandinavian Youth Forum') }}</span>
-        <span class="header__title header__title--forum-name">{{ dict('Northern Dialogue') }}</span>
+        <span class="header__title">{{ ruseng('Российско-скандинавский молодежный форум', 'Russian-Scandinavian Youth Forum') }}</span>
+        <span class="header__title header__title--forum-name">{{ ruseng('Северный Диалог', 'Northern Dialogue') }}</span>
     </div>
 
     <ul class="menu">
         <li class="menu__item">
-            <a href="{{ path_for('main-page') }}">{{ dict('Main page') }}</a>
-        </li>
-
-        <li class="menu__item">
-            <a href="{{ path_for('program-page') }}">{{ dict('Program') }}</a>
-        </li>
-
-        <li class="menu__item">
-            <a href="{{ path_for('speakers-page') }}">{{ dict('Speakers') }}</a>
+            <a href="{{ path_for('main-page') }}">{{ ruseng('Главная страница', 'Main page') }}</a>
         </li>
 
         {#<li class="menu__item">#}
-            {#<a href="{{ path_for('news-page') }}">{{ dict('News') }}</a>#}
+            {#<a href="{{ path_for('program-page') }}">{{ ruseng('Program') }}</a>#}
         {#</li>#}
 
         <li class="menu__item">
-            <a href="{{ path_for('participation-page') }}">{{ dict('For participants') }}</a>
+            <a href="{{ path_for('speakers-page') }}">{{ ruseng('Спикеры', 'Speakers') }}</a>
+        </li>
+
+        {#<li class="menu__item">#}
+            {#<a href="{{ path_for('news-page') }}">{{ ruseng('News') }}</a>#}
+        {#</li>#}
+
+        <li class="menu__item">
+            <a href="{{ path_for('participation-page') }}">{{ ruseng('Участникам', 'For participants') }}</a>
         </li>
 
         <li class="menu__item">
-            <a href="{{ path_for('partnership-page') }}">{{ dict('For partners') }}</a>
+            <a href="{{ path_for('partnership-page') }}">{{ ruseng('Партнерам', 'For partners') }}</a>
         </li>
 
         <li class="menu__item">
-            <a href="{{ path_for('contacts-page') }}">{{ dict('Contacts') }}</a>
+            <a href="{{ path_for('contacts-page') }}">{{ ruseng('Контакты', 'Contacts') }}</a>
         </li>
 
         {#<li class="menu__item">#}
@@ -91,11 +94,15 @@
         </div>
 
         <div class="footer__event">
-            <p>{{ dict('event-date') }}</p>
+            <p>{{ ruseng('8 - 12 апреля 2019', 'April 8 - 12, 2019') }}</p>
 
-            <p>{{ dict('mgimo-name') }}</p>
+            <p>{{ ruseng('МГИМО Университет', 'MGIMO University') }}</p>
 
-            <p><a href="https://www.google.com/maps/place/Moscow+State+Institute+of+International+Relations/@55.6728244,37.4824732,17z/data=!3m1!4b1!4m5!3m4!1s0x46b54daf59234abf:0x960854570f206625!8m2!3d55.6728244!4d37.4846619" target="_blank">{{ dict('mgimo-address') }}</a></p>
+            <p>
+                <a href="https://www.google.com/maps/place/Moscow+State+Institute+of+International+Relations/@55.6728244,37.4824732,17z/data=!3m1!4b1!4m5!3m4!1s0x46b54daf59234abf:0x960854570f206625!8m2!3d55.6728244!4d37.4846619" target="_blank">
+                    {{ ruseng('проспект Вернадского, 76, Москва', '76, Prospect Vernadskogo, Moscow') }}
+                </a>
+            </p>
         </div>
     </div>
 
