@@ -524,6 +524,7 @@ h1, h2, h3 {
                 background-image: url(src/images/nso-logo.svg);
                 width: 80px;
                 height: 80px;
+                margin: 0 28px;
             }
 
 @media all and (max-width: 980px) {
