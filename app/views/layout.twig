@@ -8,9 +8,9 @@
     <meta name="description" content="{{ ruseng('Российско-скандинавский молодежный форум', 'Russian-Scandinavian Youth Forum') }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <meta property="og:title" content>
+    <meta property="og:title" content="{{ title ?: ruseng('Северный Диалог', 'Northern Dialogue') }}">
     <meta property="og:site_name" content="{{ ruseng('Северный Диалог', 'Northern Dialogue') }}">
-    <meta property="og:image" content="/public/meta-image.png">
+    <meta property="og:image" content="{{ getHostname() }}/public/meta-image.png">
     <meta property="og:type" content="article">
 
     <link href="{{ filemtime('/public/bundle.css') }}" rel="stylesheet" type="text/css">

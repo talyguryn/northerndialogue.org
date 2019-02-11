@@ -24,6 +24,7 @@ class TwigExtensions extends TwigExtension {
             new \Twig_SimpleFunction('dict', array($this, 'dict')),
             new \Twig_SimpleFunction('filemtime', array($this, 'filemtime')),
             new \Twig_SimpleFunction('ruseng', array($this, 'ruseng')),
+            new \Twig_SimpleFunction('getHostname', array($this, 'getHostname')),
         ];
     }
 
@@ -54,5 +55,16 @@ class TwigExtensions extends TwigExtension {
         }
 
         return $russianPhrase;
+    }
+
+    public function getHostname() {
+        if (isset($_SERVER['HTTPS']) && ($_SERVER['HTTPS'] == 'on' || $_SERVER['HTTPS'] == 1) ||
+            isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https') {
+            $protocol = 'https://';
+        } else {
+            $protocol = 'http://';
+        }
+        $host = $_SERVER['HTTP_HOST'];
+        return $protocol . $host;
     }
 }
