@@ -1,39 +1,38 @@
 {% extends "layout.twig" %}
 
-{% set title = ruseng('Партнерство', 'Partnership') %}
+{% set title = ruseng('Стать партнером', 'Become a Partner') %}
 
 {% block content %}
     <h1>{{ title }}</h1>
 
     {% if lang == 'en' %}
-        <p>Like any major event our Forum needs your support:</p>
+        <p>Like every huge event our Forum needs Your support:</p>
 
         <ul>
-            <li>information support</li>
-            <li>financial support</li>
-            <li>promotional campaign</li>
+            <li>information</li>
+            <li>financial</li>
+            <li>joint advertising</li>
         </ul>
 
-        <p>The privileges of our partners:</p>
+        <p>What we offer:</p>
 
         <ul>
-            <li>Advertising of your company - Brief information about the partners is published on a separate page of our website. Moreover, we publish introductory articles on your company on our social networks (Facebook, Instagram, Vkontakte).</li>
-            <li>Marketing distribution of your product - we provide the participants and the lecturers with memorable gifts.</li>
-            <li>Long-term cooperation - an opportunity to establish direct contacts with representatives of government authorities and private enterprises.</li>
-            <li>Supporting our Forum you contribute to the development of Russian-Nordic relations through youth policy.</li>
+            <li>Advertising of Your company — all our partners are listed on our website with brief information about them; we are also ready to post Your advertisements on our official pages in various social networks (Facebook, Instagram, VK).</li>
+            <li>Marketing promotion of Your products — every speaker and participant will receive special souvenirs and gifts.</li>
+            <li>Long-term cooperation — our Forum provides You with an opportunity to establish contacts with both private companies and governmental bodies.</li>
+            <li>Supporting our Forum, You contribute to the development of Russian-Nordic relations!</li>
         </ul>
 
         <p>Our partners:</p>
 
         <ul>
-            <li>MGIMO University</li>
             <li>MGIMO Endowment Foundation</li>
             <li>Finland Embassy in Russia</li>
             <li>Iceland Embassy in Russia</li>
-            <li>Nonprofit Partnership «ODRI»</li>
+            <li>ODRI — Russian-Icelandic Friendship Society</li>
         </ul>
 
-        <p>For more detailed information please contact us by email with the subject Cooperation: <a href="mailto:northerndialogue@mail.ru?subject={{ dict('Partnership') }}">northerndialogue@mail.ru</a></p>
+        <p>For more detailed information, please, contact us via email with a «Partners» topic: <a href="mailto:northerndialogue@mail.ru?subject=Partners">northerndialogue@mail.ru</a></p>
 
         <p>Contact — <b>Angelina Arkhipova</b></p>
     {% elseif lang == 'ru' %}
@@ -57,7 +56,6 @@
         <p>Нашими партнерами уже стали:</p>
 
         <ul>
-            <li>МГИМО (У) МИД РФ</li>
             <li>Эндаумент МГИМО</li>
             <li>Посольство Финляндии в Российской Федерации</li>
             <li>Посольство Исландии в Российской Федерации</li>
@@ -67,7 +65,5 @@
         <p>За более подробной информацией пишите нам на почту с темой «Партнёрство»: <a href="mailto:northerndialogue@mail.ru?subject={{ dict('Partnership') }}">northerndialogue@mail.ru</a></p>
 
         <p>Контактное лицо — <b>Ангелина Архипова</b></p>
-
-        {#Или заполните форму, представленную ниже:#}
     {% endif %}
 {% endblock %}
