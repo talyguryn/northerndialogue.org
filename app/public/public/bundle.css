@@ -741,10 +741,10 @@ h1, h2, h3 {
     }
 
 .about-scheme__item {
-        padding: 10px 20px;
+        padding: 10px 30px;
         background-color: #1B86C8;
         color: #fff;
-        border-radius: 8px;
+        border-radius: 15px;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
