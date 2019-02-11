@@ -867,3 +867,8 @@ a {
 .person__job {
         color: #7d7d7d;
     }
+
+.copyright {
+    text-align: center;
+    margin: 15px;
+}
