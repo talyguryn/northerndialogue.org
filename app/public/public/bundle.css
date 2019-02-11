@@ -528,6 +528,10 @@ a {
                 background-image: url(src/images/forum-logo.png);
             }
 
+.header__logos-item--club {
+                background-image: url(src/images/club-logo.png);
+            }
+
 .header__logos-item--nso {
                 background-image: url(src/images/nso-logo.svg);
                 width: 80px;
