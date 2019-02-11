@@ -7,17 +7,17 @@ $app->get('/', function (Request $request, Response $response, array $args) {
     return $this->view->render($response, 'pages/index.twig');
 })->setName('main-page');
 
-$app->get('/program', function (Request $request, Response $response, array $args) {
-    return $this->view->render($response, 'pages/program.twig');
-})->setName('program-page');
+$app->get('/about', function (Request $request, Response $response, array $args) {
+    return $this->view->render($response, 'pages/about.twig');
+})->setName('about-page');
+
+$app->get('/programme', function (Request $request, Response $response, array $args) {
+    return $this->view->render($response, 'pages/programme.twig');
+})->setName('programme-page');
 
 $app->get('/speakers', function (Request $request, Response $response, array $args) {
     return $this->view->render($response, 'pages/speakers.twig');
 })->setName('speakers-page');
-
-//$app->get('/news', function (Request $request, Response $response, array $args) {
-//    return $this->view->render($response, 'pages/news.twig');
-//})->setName('news-page');
 
 $app->get('/participation', function (Request $request, Response $response, array $args) {
     return $this->view->render($response, 'pages/participation.twig');
@@ -26,6 +26,10 @@ $app->get('/participation', function (Request $request, Response $response, arra
 $app->get('/partnership', function (Request $request, Response $response, array $args) {
     return $this->view->render($response, 'pages/partnership.twig');
 })->setName('partnership-page');
+
+$app->get('/organizers', function (Request $request, Response $response, array $args) {
+    return $this->view->render($response, 'pages/organizers.twig');
+})->setName('organizers-page');
 
 $app->get('/contacts', function (Request $request, Response $response, array $args) {
     return $this->view->render($response, 'pages/contacts.twig');

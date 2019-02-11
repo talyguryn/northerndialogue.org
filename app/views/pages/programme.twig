@@ -1,0 +1,13 @@
+{% extends "layout.twig" %}
+
+{% set title = ruseng('Программа', 'Programme') %}
+
+{% block content %}
+    <h1>{{ ruseng('Программа', 'Programme') }}</h1>
+
+    {% if lang == 'en' %}
+        ...
+    {% elseif lang == 'ru' %}
+        ...
+    {% endif %}
+{% endblock %}

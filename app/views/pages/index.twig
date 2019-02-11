@@ -32,11 +32,19 @@
         <p>Если Вам небезразлично будущее наших государств и то, как будут развиваться наши двусторонние отношения, то мы ждем Вас в рядах участников первого Российско-скандинавского молодежного форума «Северный диалог»!</p>
     {% endif %}
 
-    <a href="{{ dict('registration-form-url') }}" target="_blank" class="df jcc tdn usn">
-        <span class="registration-button">
+    <h2>{{ ruseng('Об Организаторе', 'About the Organizer') }}</h2>
+
+    {% if lang == 'en' %}
+        <p><b>Scandinavian Club MGIMO Nordlys</b> (Norw. «northern lights») is a student-run organization at MGIMO-University founded in order to provide students with an opportunity to explore Scandinavian region, policies, economies and legal systems of Nordic countries and their relations with Russia. The Club`s activity is aimed at establishing strong ties with the countries of the region in various areas.</p>
+    {% elseif lang == 'ru' %}
+        <p><b>Скандинавский клуб МГИМО Nordlys</b> (норв. «северное сияние») — это студенческое объединение в рамках МГИМО МИД России, созданное с целью предоставить обучающимся возможность всестороннего изучения Скандинавского региона, политики, экономики и права скандинавских стран и их взаимоотношений с Российской Федерацией и другими странами и регионами мира, а также с целью способствовать укреплению и развитию диалога Российской Федерации со странами региона и установлению прочных связей в различных сферах деятельности.</p>
+    {% endif %}
+
+    <div class="df jcc">
+        <a href="{{ dict('registration-form-url') }}" target="_blank" class="tdn usn registration-button">
             {{ ruseng('Зарегистироваться', 'Apply now') }}
-        </span>
-    </a>
+        </a>
+    </div>
 
     <h2>{{ ruseng('Топовые спикеры', 'Top speakers') }}</h2>
 
@@ -46,20 +54,12 @@
         ...
     {% endif %}
 
-    <h2>{{ ruseng('Об Организаторе', 'About the Organizer') }}</h2>
-
-    {% if lang == 'en' %}
-        <p><b>Scandinavian Club MGIMO Nordlys</b> (Norw. «northern lights») is a student-run organization at MGIMO-University founded in order to provide students with an opportunity to explore Scandinavian region, policies, economies and legal systems of Nordic countries and their relations with Russia. The Club`s activity is aimed at establishing strong ties with the countries of the region in various areas.</p>
-    {% elseif lang == 'ru' %}
-        <p><b>Скандинавский клуб МГИМО Nordlys</b> (норв. «северное сияние») — это студенческое объединение в рамках МГИМО МИД России, созданное с целью предоставить обучающимся возможность всестороннего изучения Скандинавского региона, политики, экономики и права скандинавских стран и их взаимоотношений с Российской Федерацией и другими странами и регионами мира, а также с целью способствовать укреплению и развитию диалога Российской Федерации со странами региона и установлению прочных связей в различных сферах деятельности.</p>
-    {% endif %}
-
     <h2>{{ ruseng('Свежие новости', 'Latest news') }}</h2>
 
     <div class="news">
         {% set news = [
             {
-                date: ruseng('11 Февраля', 'Feb 11th'),
+                date: ruseng('31 Января', 'Jan 31th'),
                 text: ruseng('Рады приветствовать гостей сайта.', 'We are pleased to welcome guests of the site.')
             },
             {

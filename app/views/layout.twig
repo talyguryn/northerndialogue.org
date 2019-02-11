@@ -5,13 +5,13 @@
     <meta http-equiv="content-language" content="{{ lang }}">
 
     <title>{{ title ?: ruseng('Северный Диалог', 'Northern Dialogue') }}</title>
-    <meta name="description" content="{{ ruseng('Российско-скандинавский молодежный форум', 'Russian-Scandinavian Youth Forum') }}" />
+    <meta name="description" content="{{ ruseng('Российско-скандинавский молодежный форум', 'Russian-Nordic Youth Forum') }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
     <meta property="og:title" content="{{ title ?: ruseng('Северный Диалог', 'Northern Dialogue') }}">
     <meta property="og:site_name" content="{{ ruseng('Северный Диалог', 'Northern Dialogue') }}">
     <meta property="og:image" content="{{ getHostname() }}/public/meta-image.png">
-    <meta property="og:type" content="article">
+    <meta property="og:type" content="website">
 
     <link href="{{ filemtime('/public/bundle.css') }}" rel="stylesheet" type="text/css">
 </head>
@@ -28,7 +28,7 @@
             <div class="header__logos-item header__logos-item--mgimo"></div>
         </div>
 
-        <span class="header__title">{{ ruseng('Российско-скандинавский молодежный форум', 'Russian-Scandinavian Youth Forum') }}</span>
+        <span class="header__title">{{ ruseng('Российско-скандинавский молодежный форум', 'Russian-Nordic Youth Forum') }}</span>
         <span class="header__title header__title--forum-name">{{ ruseng('Северный Диалог', 'Northern Dialogue') }}</span>
     </div>
 
@@ -37,32 +37,32 @@
             <a href="{{ path_for('main-page') }}">{{ ruseng('Главная страница', 'Main page') }}</a>
         </li>
 
-        {#<li class="menu__item">#}
-            {#<a href="{{ path_for('program-page') }}">{{ ruseng('Program') }}</a>#}
-        {#</li>#}
-
         <li class="menu__item">
-            <a href="{{ path_for('speakers-page') }}">{{ ruseng('Спикеры', 'Speakers') }}</a>
+            <a href="{{ path_for('about-page') }}">{{ ruseng('О Форуме', 'About the Forum') }}</a>
         </li>
 
         {#<li class="menu__item">#}
-            {#<a href="{{ path_for('news-page') }}">{{ ruseng('News') }}</a>#}
+            {#<a href="{{ path_for('programme-page') }}">{{ ruseng('Программа', 'Programme') }}</a>#}
         {#</li>#}
 
-        <li class="menu__item">
-            <a href="{{ path_for('participation-page') }}">{{ ruseng('Участникам', 'For participants') }}</a>
-        </li>
+        {#<li class="menu__item">#}
+            {#<a href="{{ path_for('speakers-page') }}">{{ ruseng('Спикеры', 'Speakers') }}</a>#}
+        {#</li>#}
+
+        {#<li class="menu__item">#}
+            {#<a href="{{ path_for('participation-page') }}">{{ ruseng('Участникам', 'For participants') }}</a>#}
+        {#</li>#}
 
         <li class="menu__item">
             <a href="{{ path_for('partnership-page') }}">{{ ruseng('Партнерам', 'For partners') }}</a>
         </li>
 
-        <li class="menu__item">
-            <a href="{{ path_for('contacts-page') }}">{{ ruseng('Контакты', 'Contacts') }}</a>
-        </li>
+        {#<li class="menu__item">#}
+            {#<a href="{{ path_for('organizers-page') }}">{{ ruseng('Оргкомитет', 'Organizing Committe') }}</a>#}
+        {#</li>#}
 
         {#<li class="menu__item">#}
-            {#<a href="{{ dict('registration-form-url') }}" target="_blank">{{ dict('Registration') }}</a>#}
+            {#<a href="{{ path_for('contacts-page') }}">{{ ruseng('Контакты', 'Contacts') }}</a>#}
         {#</li>#}
     </ul>
 

@@ -1,0 +1,55 @@
+{% extends "layout.twig" %}
+
+{% set title = ruseng('О Форуме', 'About the Forum') %}
+
+{% block content %}
+    <h1>{{ ruseng('О Форуме', 'About the Forum') }}</h1>
+
+    {% if lang == 'en' %}
+        <p><b>Russia and Scandinavia</b> are more than just neighbours united by the geographic location, common history and, undoubtedly, common future. But what will this future be like?</p>
+
+        <p>It is up to us — the youth who represent the future generation of leaders of Russia and Scandinavia and will soon be responsible for the development of our bilateral relations.</p>
+
+        <p>Thinking this way, our team came up with an idea to organise the very first platform of such a kind that could provide young representatives of Russia and Scandinavia with a unique opportunity to communicate and share experience — <b>Russian-Nordic Youth Forum «Northern Dialogue»</b>.</p>
+
+        <p>Several formats of interaction between the participants will be offered within the framework of «Northern Dialogue». As the Forum specifically targets young people, the main focus will be on representatives of the Russian and Nordic youth and their participation in the events and interactive sessions as well as on their personal communication with each other. At the same time, the Forum also aims to show students the full picture of Russia's bilateral relations with the countries of the region which is planned to be demonstrated via panel discussions where diplomatic representatives, political and public figures, entrepreneurs and leading experts in the field of Russian-Nordic relations will be also participating.</p>
+    {% elseif lang == 'ru' %}
+        <p><b>Россия и Скандинавия</b> — больше, чем просто соседи, объединенные общим географическим положением, общей историей и, несомненно, общим будущим. Но каким будет это будущее?</p>
+
+        <p>Это предстоит решать уже нам — молодежи, будущему поколению лидеров России и Скандинавии, которые уже совсем скоро будут нести ответственность за то, как будут развиваться наши отношения.</p>
+
+        <p>В ходе подобных рассуждений у нашей команды родилась идея организации самой масштабной и, на сегодняшний день, единственной в своем роде площадки, на которой смогли бы общаться и обмениваться опытом молодые представители России и Скандинавии — <b>Российско-скандинавского молодежного форума «Северный диалог»</b>.</p>
+
+        <p>В рамках «Северного диалога» будет организовано нескольких форматов взаимодействия участников. Поскольку форум именно молодежный, главный акцент делается на участии представителей молодежи России и Северной Европы в мероприятиях и интерактивных сессиях, а также на их личном общении между собой. Но, в то же время, форум призван также показать студентам максимально полную картину двусторонних отношений России со странами региона, что планируется реализовать посредством панельных дискуссий с участием дипломатических представителей, политических и общественных деятелей, предпринимателей и ведущих экспертов в области российско-скандинавских отношений.</p>
+    {% endif %}
+
+    {% if lang == 'en' %}
+        <p>Thus, the format of the event can be presented as <b>2-level communication</b>:</p>
+
+        <ul>
+            <li>интерактивные сессии с участием молодежи;</li>
+            <li>панельные дискуссии с признанными экспертами и практиками в области российско-скандинавского взаимодействия.</li>
+        </ul>
+    {% elseif lang == 'ru' %}
+        <p>Таким образом, формат мероприятия можно условно разделить на <b>2 направления</b>:</p>
+
+        <ul>
+            <li>интерактивные сессии с участием молодежи;</li>
+            <li>панельные дискуссии с признанными экспертами и практиками в области российско-скандинавского взаимодействия.</li>
+        </ul>
+    {% endif %}
+
+    <div class="about-scheme">
+        <div class="about-scheme__row">
+            <div class="about-scheme__item">{{ ruseng("Эксперты", "Experts") }}</div>
+            <div class="about-scheme__arrow"></div>
+            <div class="about-scheme__item">{{ ruseng("Молодежь России и Скандинавии", "Russian and Nordic youth representatives") }}</div>
+        </div>
+        <div class="about-scheme__row">
+            <div class="about-scheme__item">{{ ruseng("Молодежь России", "Russian youth") }}</div>
+            <div class="about-scheme__arrow"></div>
+            <div class="about-scheme__item">{{ ruseng("Молодежь Скандинавии", "Nordic youth") }}</div>
+        </div>
+    </div>
+
+{% endblock %}

@@ -320,3 +320,51 @@ h1, h2, h3 {
     }
 }
 
+.about-scheme {
+    &__row {
+        display: flex;
+        justify-content: center;
+        margin: 20px 0;
+    }
+
+    &__item {
+        padding: 10px 20px;
+        background-color: var(--button-main-color);
+        color: #fff;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 100px;
+        text-align: center
+    }
+
+    &__arrow {
+        height: 10px;
+        width: 100%;
+        max-width: 100px;
+        margin: auto 20px;
+        background-color: var(--button-main-color);
+        position: relative;
+
+        &:before {
+            content: '';
+            position: absolute;
+            left: -20px;
+            top: -5px;
+            border-style: solid;
+            border-width: 10px;
+            border-color: transparent var(--button-main-color) transparent transparent;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: -5px;
+            right: -20px;
+            border-style: solid;
+            border-width: 10px;
+            border-color: transparent transparent transparent var(--button-main-color);
+        }
+    }
+}
