@@ -10,7 +10,14 @@
 }
 
 .clearfix {
-  overflow: auto;
+    &:after, &:before {
+        content: " ";
+        display: table
+    }
+
+    &:after {
+        clear: both
+    }
 }
 
 body {
@@ -391,5 +398,29 @@ a {
         &--small {
             max-width: 80px;
         }
+    }
+}
+
+.person {
+    margin: 20px 0;
+
+    &__image {
+        width: 80px;
+        height: 80px;
+        border-radius: 40px;
+        margin-right: 20px;
+        float: left;
+    }
+
+    &__info {
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 80px;
+    }
+
+    &__job {
+        color: #7d7d7d;
     }
 }

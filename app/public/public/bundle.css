@@ -350,9 +350,14 @@ template {
 :root {
 }
 
-.clearfix {
-  overflow: auto;
-}
+.clearfix:after, .clearfix:before {
+        content: " ";
+        display: table
+    }
+
+.clearfix:after {
+        clear: both
+    }
 
 body {
     position: relative;
@@ -827,3 +832,34 @@ a {
 .table__cell--small {
             max-width: 80px;
         }
+
+.person {
+    margin: 20px 0;
+}
+
+.person__image {
+        width: 80px;
+        height: 80px;
+        border-radius: 40px;
+        margin-right: 20px;
+        float: left;
+    }
+
+.person__info {
+        overflow: hidden;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        height: 80px;
+    }
+
+.person__job {
+        color: #7d7d7d;
+    }
