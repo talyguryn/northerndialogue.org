@@ -32,51 +32,53 @@
         <span class="header__title header__title--forum-name">{{ ruseng('Северный Диалог', 'Northern Dialogue') }}</span>
     </div>
 
-    <ul class="menu">
-        <li class="menu__item">
-            <a href="{{ path_for('main-page') }}">{{ ruseng('Главная страница', 'Main page') }}</a>
-        </li>
 
-        <li class="menu__item">
-            <a href="{{ path_for('about-page') }}">{{ ruseng('О Форуме', 'About the Forum') }}</a>
-        </li>
+    <div class="menu">
+        <div class="menu__group">
+            <span class="menu__item">
+                <a href="{{ path_for('main-page') }}">{{ ruseng('Главная страница', 'Main page') }}</a>
+            </span>
 
-        <li class="menu__item">
-            <a href="{{ path_for('programme-page') }}">{{ ruseng('Программа', 'Programme') }}</a>
-        </li>
+            <span class="menu__item">
+                <a href="{{ path_for('about-page') }}">{{ ruseng('О Форуме', 'About the Forum') }}</a>
+            </span>
 
-        <li class="menu__item">
-            <a href="{{ path_for('speakers-page') }}">{{ ruseng('Спикеры', 'Speakers') }}</a>
-        </li>
+            <span class="menu__item">
+                <a href="{{ path_for('programme-page') }}">{{ ruseng('Программа', 'Programme') }}</a>
+            </span>
 
-    </ul>
-    <ul class="menu">
-        <li class="menu__item">
-            <a href="{{ path_for('participation-page') }}">{{ ruseng('Участникам', 'For participants') }}</a>
-        </li>
+            <span class="menu__item">
+                <a href="{{ path_for('speakers-page') }}">{{ ruseng('Спикеры', 'Speakers') }}</a>
+            </span>
+        </div>
+        <div class="menu__group">
+            <span class="menu__item">
+                <a href="{{ path_for('participation-page') }}">{{ ruseng('Участникам', 'For participants') }}</a>
+            </span>
 
-        <li class="menu__item">
-            <a href="{{ path_for('partnership-page') }}">{{ ruseng('Партнерам', 'For partners') }}</a>
-        </li>
+            <span class="menu__item">
+                <a href="{{ path_for('partnership-page') }}">{{ ruseng('Партнерам', 'For partners') }}</a>
+            </span>
 
-        <li class="menu__item">
-            <a href="{{ path_for('organizers-page') }}">{{ ruseng('Оргкомитет', 'Organizing Committee') }}</a>
-        </li>
+            <span class="menu__item">
+                <a href="{{ path_for('organizers-page') }}">{{ ruseng('Оргкомитет', 'Organizing Committee') }}</a>
+            </span>
 
-        <li class="menu__item">
-            <a href="{{ path_for('contacts-page') }}">{{ ruseng('Контакты', 'Contacts') }}</a>
-        </li>
-    </ul>
+            <span class="menu__item">
+                <a href="{{ path_for('contacts-page') }}">{{ ruseng('Контакты', 'Contacts') }}</a>
+            </span>
+        </div>
+    </div>
 
     {% block local_header %}
-        <hr class="mb40">
+        {#<hr class="mb40">#}
     {% endblock %}
 
     <div class="page column">
         {% block content %}{% endblock %}
     </div>
 
-    <hr>
+    {#<hr>#}
 
     <div class="footer column">
         <div>
