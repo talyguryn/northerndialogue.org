@@ -10,7 +10,7 @@
 
         <ul>
             <li>рarticipant</li>
-            <li>пuest</li>
+            <li>guest</li>
         </ul>
 
         <p>The «participant» format means active participation in all events of the main and social programme of the Forum, including the Youth Day. All participants will receive Certificates of participation at the end of the Forum.</p>
@@ -24,12 +24,6 @@
         </div>
 
         <p>Participation in the Forum is <b>free</b>. All travelling expenses, accommodation and catering costs are covered <b>by the participants</b>.</p>
-
-        <p>Besides organizing the Forum itself, we are interested in ensuring your comfortable travel to «Northern Dialogue». Therefore, we are actively working to assist our foreign participants in obtaining a visa to Russia. Our support consists in providing you with a telex number, which makes receiving a visa significantly easier compared to the standard procedure, but it does not free you from the responsibility of finding out the details of applying for the Russian visa in your country.</p>
-
-        <h2>Travelling to Russia</h2>
-
-        <p>Very soon You’ll find here detailed information about the Russian visa requirements, convenient flights, accommodation options and everything You need to know about travelling to Russia.</p>
     {% elseif lang == 'ru' %}
         <p>В рамках «Северного диалога» предусмотрено 2 формата участия:</p>
 
@@ -49,9 +43,15 @@
         </div>
 
         <p>Участие в форуме <b>бесплатное</b>. Все транспортные расходы, а также расходы на проживание и питание оплачиваются участниками <b>самостоятельно</b>.</p>
+    {% endif %}
 
-        <p><i>Визовая информация</i></p>
+    <h2>{{ ruseng('Все о путешествии в Россию', 'Travelling to Russia') }}</h2>
 
-        <p><i>Предложения по авиабилетам, проживанию и питанию</i></p>
+    {% if lang == 'en' %}
+        <p>Besides organizing the Forum itself, we are interested in ensuring your comfortable travel to «Northern Dialogue». Therefore, we are actively working to assist our foreign participants in obtaining a visa to Russia. Our support consists in providing you with a telex number, which makes receiving a visa significantly easier compared to the standard procedure, but it does not free you from the responsibility of finding out the details of applying for the Russian visa in your country.</p>
+
+        <p>Very soon You’ll find here detailed information about the Russian visa requirements, convenient flights, accommodation options and everything You need to know about travelling to Russia.</p>
+    {% elseif lang == 'ru' %}
+        <p>Скоро здесь появится подробная информация о порядке получения российской визы, удобным авиарейсам, ближайшим к МГИМО вариантам размещения, а также иная полезная информация о путешествии в Россию!</p>
     {% endif %}
 {% endblock %}

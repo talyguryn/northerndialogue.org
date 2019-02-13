@@ -359,6 +359,10 @@ template {
         clear: both
     }
 
+.constrain {
+    overflow: hidden;
+}
+
 body {
     position: relative;
     max-width: 800px;
@@ -814,6 +818,7 @@ a {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    margin-bottom: 50px;
 }
 
 .table__row {
@@ -833,7 +838,7 @@ a {
 .table__cell {
         width: 100%;
         margin: 1px;
-        padding: 5px;
+        padding: 10px 5px;
     }
 
 .table__cell--title {
@@ -841,19 +846,35 @@ a {
         }
 
 .table__cell--small {
-            max-width: 80px;
+            max-width: 90px;
         }
 
 .orgs__item {
-        margin-bottom: 40px;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
     }
+
+.orgs__item img {
+            width: 150px;
+            float: left;
+            margin: 0 20px 10px 0;
+        }
+
+@media all and (max-width: 980px) {
+
+.orgs__item img {
+                margin: 0 auto;
+                float: none;
+                display: block
+        }
+            }
 
 .orgs__link {
         margin: 0 10px;
     }
 
 .person {
-    margin: 20px 0;
+    margin: 30px 0;
 }
 
 .person__image {
@@ -865,7 +886,6 @@ a {
     }
 
 .person__info {
-        overflow: hidden;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -888,3 +908,15 @@ a {
     text-align: center;
     margin: 15px;
 }
+
+.label:after {
+        content: attr(data-label-text);
+        display: inline-block;
+        color: #fff;
+        background-color: #ccc;
+        font-size: 0.6em;
+        margin-left: 10px;
+        padding: 3px 10px 5px;
+        border-radius: 3px;
+        vertical-align: middle;
+    }

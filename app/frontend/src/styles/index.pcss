@@ -20,6 +20,10 @@
     }
 }
 
+.constrain {
+    overflow: hidden;
+}
+
 body {
     position: relative;
     max-width: 800px;
@@ -389,6 +393,7 @@ a {
     display: flex;
     align-content: center;
     flex-direction: column;
+    margin-bottom: 50px;
 
     &__row {
         display: flex;
@@ -400,21 +405,34 @@ a {
     &__cell {
         width: 100%;
         margin: 1px;
-        padding: 5px;
+        padding: 10px 5px;
 
         &--title {
             font-weight: 800;
         }
 
         &--small {
-            max-width: 80px;
+            max-width: 90px;
         }
     }
 }
 
 .orgs {
     &__item {
-        margin-bottom: 40px;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+
+        & img {
+            width: 150px;
+            float: left;
+            margin: 0 20px 10px 0;
+
+            @media (--mobile) {
+                margin: 0 auto;
+                float: none;
+                display: block;
+            }
+        }
     }
 
     &__link {
@@ -423,7 +441,7 @@ a {
 }
 
 .person {
-    margin: 20px 0;
+    margin: 30px 0;
 
     &__image {
         width: 80px;
@@ -434,7 +452,6 @@ a {
     }
 
     &__info {
-        overflow: hidden;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -450,4 +467,18 @@ a {
     color: #7d7d7d;
     text-align: center;
     margin: 15px;
+}
+
+.label {
+    &:after {
+        content: attr(data-label-text);
+        display: inline-block;
+        color: #fff;
+        background-color: #ccc;
+        font-size: 0.6em;
+        margin-left: 10px;
+        padding: 3px 10px 5px;
+        border-radius: 3px;
+        vertical-align: middle;
+    }
 }

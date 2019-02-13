@@ -43,31 +43,31 @@
         </a>
     </div>
 
-    <h2>{{ ruseng('Топовые спикеры', 'Top speakers') }}</h2>
+    <h2>{{ ruseng('Наши спикеры', 'Top speakers') }}</h2>
 
-    {% if lang == 'en' %}
-        ...
-    {% elseif lang == 'ru' %}
-        ...
-    {% endif %}
+    TBA
 
     <h2>{{ ruseng('Свежие новости', 'Latest news') }}</h2>
 
     <div class="news">
         {% set news = [
             {
+                date: ruseng('12 Февраля', 'Feb 12th'),
+                text: ruseng('Представляем Вашему вниманию предварительную <a href="/programme#social-programme">культурную программу</a> Форума!', 'The preliminary <a href="/programme#social-programme">social programme</a> is available now!')
+            },
+            {
                 date: ruseng('31 Января', 'Jan 31th'),
-                text: ruseng('Рады приветствовать гостей сайта.', 'We are pleased to welcome guests of the site.')
+                text: ruseng('Рады приветствовать гостей сайта!', 'We are glad to welcome the guests of our website!')
             },
             {
                 date: ruseng('25 Января', 'Jan 25th'),
-                text: ruseng('Регистрация открыта!', 'Resgistration is open now!')
+                text: ruseng('Регистрация открыта!', 'Registration is now open!')
             }
         ] %}
 
         {% for news_item in news %}
             <div class="news-item" data-time="{{ news_item.date }}">
-                {{ news_item.text }}
+                {{ news_item.text|raw }}
             </div>
         {% endfor %}
     </div>
