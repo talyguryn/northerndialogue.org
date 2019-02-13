@@ -32,6 +32,10 @@ return [
                 'ru',
             ],
             'folder' => PROJECT_ROOT . 'lang/',
+        ],
+
+        'env' => [
+            'PRODUCTION' => !!$_ENV['ENV_PRODUCTION']
         ]
     ],
 ];

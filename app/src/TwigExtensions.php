@@ -25,6 +25,7 @@ class TwigExtensions extends TwigExtension {
             new \Twig_SimpleFunction('filemtime', array($this, 'filemtime')),
             new \Twig_SimpleFunction('ruseng', array($this, 'ruseng')),
             new \Twig_SimpleFunction('getHostname', array($this, 'getHostname')),
+            new \Twig_SimpleFunction('isProduction', array($this, 'isProduction')),
         ];
     }
 
@@ -66,5 +67,9 @@ class TwigExtensions extends TwigExtension {
         }
         $host = $_SERVER['HTTP_HOST'];
         return $protocol . $host;
+    }
+
+    public function isProduction() {
+        return $this->container->get('settings')['env']['PRODUCTION'];
     }
 }
