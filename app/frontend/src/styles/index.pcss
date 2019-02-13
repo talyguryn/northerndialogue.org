@@ -312,6 +312,7 @@ a {
     height: 20px;
     background-size: contain;
     margin-right: 10px;
+    vertical-align: middle;
 
     &--facebook {
         background-image: url("../images/icons/facebook.svg");
@@ -327,6 +328,12 @@ a {
 
     &--instagram {
         background-image: url("../images/icons/instagram.svg");
+    }
+
+    &--link {
+        width: 16px;
+        height: 16px;
+        background-image: url("../images/icons/link.svg");
     }
 }
 
@@ -405,6 +412,16 @@ a {
     }
 }
 
+.orgs {
+    &__item {
+        margin-bottom: 40px;
+    }
+
+    &__link {
+        margin: 0 10px;
+    }
+}
+
 .person {
     margin: 20px 0;
 
@@ -430,6 +447,7 @@ a {
 }
 
 .copyright {
+    color: #7d7d7d;
     text-align: center;
     margin: 15px;
 }

@@ -723,6 +723,7 @@ a {
     height: 20px;
     background-size: contain;
     margin-right: 10px;
+    vertical-align: middle;
 }
 
 .icon--facebook {
@@ -739,6 +740,12 @@ a {
 
 .icon--instagram {
         background-image: url(src/images/icons/instagram.svg);
+    }
+
+.icon--link {
+        width: 16px;
+        height: 16px;
+        background-image: url(src/images/icons/link.svg);
     }
 
 .about-scheme__row {
@@ -837,6 +844,14 @@ a {
             max-width: 80px;
         }
 
+.orgs__item {
+        margin-bottom: 40px;
+    }
+
+.orgs__link {
+        margin: 0 10px;
+    }
+
 .person {
     margin: 20px 0;
 }
@@ -869,6 +884,7 @@ a {
     }
 
 .copyright {
+    color: #7d7d7d;
     text-align: center;
     margin: 15px;
 }
