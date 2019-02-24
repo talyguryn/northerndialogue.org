@@ -56,18 +56,7 @@ module.exports = {
               import: true,
             },
           },
-          {
-            loader: 'postcss-loader',
-            options: {
-              plugins: (loader) => [
-                require('postcss-nested')(),
-                require('postcss-cssnext')(),
-                // require('postcss-inline-svg')(),
-                // require('cssnano')()
-              ],
-              map: false,
-            }
-          }
+          'postcss-loader'
         ]),
       },
 
