@@ -5,12 +5,31 @@
 {% block content %}
     <h1>{{ title }}</h1>
 
-    <p><b>Елена Дорофеева</b> — литературовед и переводчик, специалист по истории литературы Финляндии,
-    автор статей о финских и скандинавских писателях, автор идеи и составитель книги
-    "У истоков российской скандинавистики: портреты филологов и переводчиков" (2018).</p>
+    {% if lang == 'en' %}
+        <p><b>Elena Dorofeyeva</b> is a literary critic and translator, an expert on the history
+        of Finnish literature, the author of articles on Finnish and Scandinavian writers,
+        the author of the idea and compiler of the book At the Source of Russian Scandinavian Studies:
+        Portraits of Philologists and Translators (2018).</p>
+    {% elseif lang == 'ru' %}
+        <p><b>Елена Дорофеева</b> — литературовед и переводчик, специалист по истории литературы Финляндии,
+        автор статей о финских и скандинавских писателях, автор идеи и составитель книги
+        "У истоков российской скандинавистики: портреты филологов и переводчиков" (2018).</p>
+    {% endif %}
 
-    <p><b>Наталья Гончарова</b> — куратор кинопроектов арт-объединения CoolConnections (фестивалей "Danish Wave", "Новое кино Швеции", "Фестиваль норвежского кино", Фестиваль кино Финляндии).</p>
 
-    <p><b>Кристина Иванникова</b> — Киновед, аспирант ВГИК, куратор киноклуба «Дрейфующая Скандинавия» в Музее кино,
-    автор статей, посвящённых становлению и развитию финского кинематографа.</p>
+    {% if lang == 'en' %}
+        <p><b>Natalia Goncharova</b> — a cinema project manager of the CoolConnections art association
+        (festivals "Danish Wave", "Sweden's New Cinema", "Norwegian Film Festival", Finnish Film Festival).</p>
+    {% elseif lang == 'ru' %}
+        <p><b>Наталья Гончарова</b> — куратор кинопроектов арт-объединения CoolConnections
+        (фестивалей "Danish Wave", "Новое кино Швеции", "Фестиваль норвежского кино", Фестиваль кино Финляндии).</p>
+    {% endif %}
+
+    {% if lang == 'en' %}
+        <p><b>Kristina Ivannikova</b> — a film expert, post-graduate student of VGIK, curator of the “Drifting Scandinavia”
+        film club in the Museum of Cinema, author of articles on the formation and development of Finnish cinema.</p>
+    {% elseif lang == 'ru' %}
+        <p><b>Кристина Иванникова</b> — Киновед, аспирант ВГИК, куратор киноклуба «Дрейфующая Скандинавия» в Музее кино,
+        автор статей, посвящённых становлению и развитию финского кинематографа.</p>
+    {% endif %}
 {% endblock %}
