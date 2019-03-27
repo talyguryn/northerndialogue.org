@@ -32,4 +32,12 @@
         <p><b>Кристина Иванникова</b> — Киновед, аспирант ВГИК, куратор киноклуба «Дрейфующая Скандинавия» в Музее кино,
         автор статей, посвящённых становлению и развитию финского кинематографа.</p>
     {% endif %}
+
+    {% if lang == 'en' %}
+        <p><b>Roman Dorofeev</b> — Director for film distribution of the Russian Reporting Television Agency
+        (“The Second Life of Uwe”, “Bergman”, “The Hunt”, “Britt-Marie was Here” and over 50 more Scandinavian films)</p>
+    {% elseif lang == 'ru' %}
+        <p><b>Роман Дорофеев</b> — Директор по кинопрокату Телевизионного агенства «Русский Репортаж»
+        («Вторая жизнь Уве», «Бергман», «Охота», «Здесь была Бритт-Мари» и ещё более 50 скандинавских кинокартин)</p>
+    {% endif %}
 {% endblock %}
