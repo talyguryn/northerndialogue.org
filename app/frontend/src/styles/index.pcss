@@ -62,6 +62,10 @@ a {
     //text-decoration: none;
 }
 
+.mb10 {
+    margin-bottom: 10px;
+}
+
 .mb40 {
     margin-bottom: 40px;
 }
@@ -496,4 +500,105 @@ a {
         border-radius: 3px;
         vertical-align: middle;
     }
+}
+
+.way {
+    background-color: #E4F2FF;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &--plane {
+        &-in {
+            background-repeat: no-repeat;
+            background-image: url("../images/icons/plane.svg");
+            background-position: 20%;
+        }
+
+        &-out {
+            background-repeat: no-repeat;
+            background-image: url("../images/icons/plane.svg");
+            background-position: 80%;
+        }
+    }
+
+    &__head {
+        font-weight: bold;
+        font-size: 1.3em;
+        margin-bottom: 15px;
+        display: flex;
+        //justify-content: center;
+        justify-content: space-between;
+
+        &-city {
+            //margin: 0 25px;
+        }
+
+        &-airport {
+            margin-left: 6px;
+            color: rgba(0, 0, 0, 0.39);
+        }
+    }
+
+    &__times {
+        display: flex;
+        justify-content: space-between;
+
+        &--center {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &__step {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 10px;
+        text-align: center;
+    }
+}
+
+.ta-r {
+    text-align: right;
+}
+
+.flag {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin: 0 5px;
+
+    &--dk {
+        background-image: url("../images/flags/rounded/dk.svg");
+    }
+
+    &--fi {
+        background-image: url("../images/flags/rounded/fi.svg");
+    }
+
+    &--fo {
+        background-image: url("../images/flags/rounded/fo.svg");
+    }
+
+    &--is {
+        background-image: url("../images/flags/rounded/is.svg");
+    }
+
+    &--no {
+        background-image: url("../images/flags/rounded/no.svg");
+    }
+
+    &--se {
+        background-image: url("../images/flags/rounded/se.svg");
+    }
+}
+
+.link-button {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #1b86c8;
+    border-radius: 5px;
 }

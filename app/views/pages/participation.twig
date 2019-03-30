@@ -54,4 +54,85 @@
     {% elseif lang == 'ru' %}
         <p>Скоро здесь появится подробная информация о порядке получения российской визы, удобным авиарейсам, ближайшим к МГИМО вариантам размещения, а также иная полезная информация о путешествии в Россию!</p>
     {% endif %}
+
+    <h3>{{ ruseng('Рейсы в Москву', 'Flights to Moscow') }}</h3>
+
+    {% set countries = [
+        {
+            name: ruseng('Норвегия', 'Norway'),
+            shortname: 'no',
+            routes: [
+                {
+                    name: 'Bergen - Moscow - Bergen',
+                    link: 'https://www.momondo.com/flight-search/BGO-MOW/2019-04-07-flexible/2019-04-13-flexible?sort=price_a'
+                },
+                {
+                    name: 'Oslo - Moscow - Oslo',
+                    link: 'https://www.momondo.com/flight-search/OSL-MOW/2019-04-07-flexible/2019-04-13-flexible?sort=price_a'
+                },
+                {
+                    name: 'Tromsø - Moscow - Tromsø',
+                    link: 'https://www.momondo.com/flight-search/TOS-MOW/2019-04-07-flexible/2019-04-13-flexible?sort=price_a'
+                }
+            ]
+        },
+        {
+            name: ruseng('Швеция', 'Sweden'),
+            shortname: 'se',
+            routes: [
+                {
+                    name: 'Stockholm - Moscow - Stockholm',
+                    link: 'https://www.momondo.com/flight-search/STO-MOW/2019-04-07-flexible/2019-04-13-flexible?sort=price_a'
+                }
+            ]
+        },
+        {
+            name: ruseng('Исландия', 'Iceland'),
+            shortname: 'is',
+            routes: [
+                {
+                    name: 'Keflavík - Moscow - Keflavík',
+                    link: 'https://www.momondo.com/flight-search/KEF-MOW/2019-04-07-flexible/2019-04-13-flexible?sort=price_a'
+                }
+            ]
+        },
+        {
+            name: ruseng('Финлядия', 'Finland'),
+            shortname: 'fi',
+            routes: [
+                {
+                    name: 'Helsinki - Moscow - Helsinki',
+                    link: 'https://www.momondo.com/flight-search/HEL-MOW/2019-04-07-flexible/2019-04-13-flexible?sort=price_a'
+                }
+            ]
+        },
+        {
+            name: ruseng('Дания', 'Denmark'),
+            shortname: 'dk',
+            routes: [
+                {
+                    name: 'Kastrup - Moscow - Kastrup',
+                    link: 'https://www.momondo.com/flight-search/CPH-MOW/2019-04-07-flexible/2019-04-13-flexible?sort=price_a'
+                }
+            ]
+        },
+        {
+            name: ruseng('Фарерские острова', 'Faroe Islands'),
+            shortname: 'fo',
+            routes: [
+                {
+                    name: 'Sørvagur - Moscow - Sørvagur',
+                    link: 'https://www.momondo.com/flight-search/FAE-MOW/2019-04-07-flexible/2019-04-13-flexible?sort=price_a'
+                }
+            ]
+        }
+    ] %}
+
+    {% for country in countries %}
+        <h4>{{ country.name }} <span class="flag flag--{{ country.shortname }}"></span></h4>
+
+        {% for route in country.routes %}
+            <p><a href="{{ route.link }}" target="_blank">{{ route.name }}</a></p>
+        {% endfor %}
+    {% endfor %}
 {% endblock %}
