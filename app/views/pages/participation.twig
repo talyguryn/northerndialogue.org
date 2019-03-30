@@ -129,10 +129,12 @@
     ] %}
 
     {% for country in countries %}
-        <h4>{{ country.name }} <span class="flag flag--{{ country.shortname }}"></span></h4>
+        <div class="flights-item">
+            <h4>{{ country.name }} <span class="flag flag--{{ country.shortname }}"></span></h4>
 
-        {% for route in country.routes %}
-            <p><a href="{{ route.link }}" target="_blank">{{ route.name }}</a></p>
-        {% endfor %}
+            {% for route in country.routes %}
+                <p><a href="{{ route.link }}" target="_blank">{{ route.name }}</a></p>
+            {% endfor %}
+        </div>
     {% endfor %}
 {% endblock %}
