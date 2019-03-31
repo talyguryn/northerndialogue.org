@@ -29,6 +29,12 @@
         <p>Если Вам небезразлично будущее наших государств и то, как будут развиваться наши двусторонние отношения, то мы ждем Вас в рядах участников первого Российско-скандинавского молодежного форума «Северный диалог»!</p>
     {% endif %}
 
+    <div class="df jcc">
+        <a href="{{ dict('registration-form-url') }}" target="_blank" class="tdn usn registration-button">
+            {{ ruseng('Зарегистироваться', 'Apply now') }}
+        </a>
+    </div>
+
     <h2>{{ ruseng('Об Организаторе', 'About the Organizer') }}</h2>
 
     {% if lang == 'en' %}
@@ -37,15 +43,42 @@
         <p><b>Скандинавский клуб МГИМО Nordlys</b> (норв. «северное сияние») — это студенческое объединение в рамках МГИМО МИД России, созданное с целью предоставить обучающимся возможность всестороннего изучения Скандинавского региона, политики, экономики и права скандинавских стран и их взаимоотношений с Российской Федерацией и другими странами и регионами мира, а также с целью способствовать укреплению и развитию диалога Российской Федерации со странами региона и установлению прочных связей в различных сферах деятельности.</p>
     {% endif %}
 
-    <div class="df jcc">
-        <a href="{{ dict('registration-form-url') }}" target="_blank" class="tdn usn registration-button">
-            {{ ruseng('Зарегистироваться', 'Apply now') }}
-        </a>
-    </div>
-
     <h2>{{ ruseng('Наши спикеры', 'Our speakers') }}</h2>
 
-    TBA
+    {% if lang == 'en' %}
+        <p><b>Elena Dorofeyeva</b> is a literary critic and translator, an expert on the history
+            of Finnish literature, the author of articles on Finnish and Scandinavian writers,
+            the author of the idea and compiler of the book At the Source of Russian Scandinavian Studies:
+            Portraits of Philologists and Translators (2018).</p>
+    {% elseif lang == 'ru' %}
+        <p><b>Елена Дорофеева</b> — литературовед и переводчик, специалист по истории литературы Финляндии,
+            автор статей о финских и скандинавских писателях, автор идеи и составитель книги
+            "У истоков российской скандинавистики: портреты филологов и переводчиков" (2018).</p>
+    {% endif %}
+
+    {% if lang == 'en' %}
+        <p><b>Natalia Goncharova</b> — a cinema project manager of the CoolConnections art association
+            (festivals "Danish Wave", "Sweden's New Cinema", "Norwegian Film Festival", Finnish Film Festival).</p>
+    {% elseif lang == 'ru' %}
+        <p><b>Наталья Гончарова</b> — куратор кинопроектов арт-объединения CoolConnections
+            (фестивалей "Danish Wave", "Новое кино Швеции", "Фестиваль норвежского кино", Фестиваль кино Финляндии).</p>
+    {% endif %}
+
+    {% if lang == 'en' %}
+        <p><b>Kristina Ivannikova</b> — a film expert, post-graduate student of VGIK, curator of the “Drifting Scandinavia”
+            film club in the Museum of Cinema, author of articles on the formation and development of Finnish cinema.</p>
+    {% elseif lang == 'ru' %}
+        <p><b>Кристина Иванникова</b> — Киновед, аспирант ВГИК, куратор киноклуба «Дрейфующая Скандинавия» в Музее кино,
+            автор статей, посвящённых становлению и развитию финского кинематографа.</p>
+    {% endif %}
+
+    {% if lang == 'en' %}
+        <p><b>Roman Dorofeev</b> — Director for film distribution of the Russian Reporting Television Agency
+            (“The Second Life of Uwe”, “Bergman”, “The Hunt”, “Britt-Marie was Here” and over 50 more Scandinavian films)</p>
+    {% elseif lang == 'ru' %}
+        <p><b>Роман Дорофеев</b> — Директор по кинопрокату Телевизионного агенства «Русский Репортаж»
+            («Вторая жизнь Уве», «Бергман», «Охота», «Здесь была Бритт-Мари» и ещё более 50 скандинавских кинокартин)</p>
+    {% endif %}
 
     <h2>{{ ruseng('Свежие новости', 'Latest news') }}</h2>
 
