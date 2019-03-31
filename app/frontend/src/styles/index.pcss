@@ -1,9 +1,9 @@
-@import "normalize.css";
+@import "sanitize.css";
+
+@custom-media --mobile all and (max-width: 980px);
+@custom-media --desktop all and (min-width: 981px);
 
 :root {
-    @custom-media --mobile all and (max-width: 980px);
-    @custom-media --desktop all and (min-width: 981px);
-
     --text-main-color: #0E357B;
     --button-main-color: #1B86C8;
     --button-main-hover-color: #1877C8;
@@ -604,11 +604,8 @@ a {
 }
 
 .flights-item {
-    background-color: rgba(60, 161, 255, 0.11);
+    background-color: rgba(60, 161, 255, 0.1);
     border-radius: 5px;
     padding: 5px 20px;
     margin: 10px 0;
-    //background-repeat: no-repeat;
-    //background-image: url("../images/icons/plane.svg");
-    //background-position: 80%;
 }
