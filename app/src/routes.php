@@ -19,6 +19,10 @@ $app->get('/speakers', function (Request $request, Response $response, array $ar
     return $this->view->render($response, 'pages/speakers.twig');
 })->setName('speakers-page');
 
+$app->get('/model-of-cbss', function (Request $request, Response $response, array $args) {
+    return $this->view->render($response, 'pages/cbss.twig');
+})->setName('cbss-page');
+
 $app->get('/participation', function (Request $request, Response $response, array $args) {
     return $this->view->render($response, 'pages/participation.twig');
 })->setName('participation-page');
