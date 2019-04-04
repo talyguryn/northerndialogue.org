@@ -5,39 +5,67 @@
 {% block content %}
     <h1>{{ title }}</h1>
 
-{#    {% if lang == 'en' %}#}
-{#    {% elseif lang == 'ru' %}#}
-    <p>Российско-Скандинавский молодёжный Форум «Северный Диалог» впервые в мире
-    организовывает Модель Совета государств Балтийского моря.</p>
+    {% if lang == 'en' %}
+        <p>The Russian-Nordic Youth Forum "Northern Dialogue" is the first
+        in the world to organize the Model of the Council of the Baltic Sea States.</p>
 
-    <p>Совет государств Балтийского моря был учрежден 5-6 марта 1992 г. в Копенгагене
-    на конференции министров иностранных дел стран Балтийского моря. В него вошли
-    Германия, Дания, Латвия, Литва, Норвегия, Польша, Россия, Финляндия, Швеция, Эстония,
-    а также Европейская комиссия.</p>
+        <p>The CBSS was established by the region’s Foreign Ministers in Copenhagen in 1992
+        as a response to the geopolitical changes that took place in the Baltic Sea region
+        with the end of the Cold War. The CBSS has 11 member states as well as the European Union:
+        Denmark, Estonia, Finland, Germany, Iceland, Latvia, Lithuania, Norway, Poland, Russia, Sweden.</p>
 
-    <p>На данный момент, постоянными членами Совета являются Дания, Эстония, Финляндия,
-    Германия, Исландия, Латвия, Литва, Норвегия, Польша, Россия и Швеция.</p>
+        <p>11 other countries have observer status: Belarus, France, Hungary, Italy,
+        Netherlands, Romania, Slovakia, Spain, Ukraine, United Kingdom, United States of America.</p>
 
-    <p>В качестве наблюдателей выступают Беларусь, Венгрия, Франция, Италия, Нидерланды,
-    Румыния, Словакия, Испания, Украина, Великобритания и США.</p>
+        <p>During the first CBSS Model, the work of two committees will be modeled:</p>
 
-    <p>В рамках первой Модели СГБМ будет моделироваться работа двух комитетов:</p>
+        <ul>
+            <li>The Council of Heads of State (agenda: Safety and Secure Region)</li>
+            <li>The Council of Ministers of Foreign Affairs (agenda: Sustainable Development)</li>
+        </ul>
 
-    <ul>
-        <li>Совета глав государств (повестка: Safety and Secure Region)</li>
-        <li>Совета министров иностранных дел (повестка: Sustainable Development)</li>
-    </ul>
+        <p>The agendas correspond to the two current agendas of the CBSS for 2018-2019.</p>
 
-    <p>Повестки дня соответствуют двум актуальным повесткам СГБМ на 2018-2019 годы.</p>
+        <p>There will be 22 delegates, 11 of whom represent observer states in each of the committees.
+        The peculiarity of observers is that they have the right to speak and express their opinions,
+        but there is no voting right or procedural vote.</p>
 
-    <p>В каждом из комитетов будет по 22 делегата, 11 из которых представляют
-    государства-наблюдатели (observer states). Особенность наблюдателей заключается
-    в том, что у них есть право выступать и высказывать своё мнение, но нет права
-    голоса или процедурного вотума.</p>
+        <p>The working language is English.</p>
 
-    <p>Рабочий язык сессий — английский.</p>
+        <p>Not only the level of proficiency in English, but also an essay on the topic
+        'How to built the Baltic identity?' influences the country the delegate is going to advocate for.</p>
+    {% elseif lang == 'ru' %}
+        <p>Российско-Скандинавский молодёжный Форум «Северный Диалог» впервые в мире
+        организовывает Модель Совета государств Балтийского моря.</p>
 
-    <p>Важную роль при распределении стран между участниками играет не только уровень
-    владения английским языком, но и эссе на тему "How to built the Baltic identity?".</p>
-{#    {% endif %}#}
+        <p>Совет государств Балтийского моря был учрежден 5-6 марта 1992 г. в Копенгагене
+        на конференции министров иностранных дел стран Балтийского моря. В него вошли
+        Германия, Дания, Латвия, Литва, Норвегия, Польша, Россия, Финляндия, Швеция, Эстония,
+        а также Европейская комиссия.</p>
+
+        <p>На данный момент, постоянными членами Совета являются Дания, Эстония, Финляндия,
+        Германия, Исландия, Латвия, Литва, Норвегия, Польша, Россия и Швеция.</p>
+
+        <p>В качестве наблюдателей выступают Беларусь, Венгрия, Франция, Италия, Нидерланды,
+        Румыния, Словакия, Испания, Украина, Великобритания и США.</p>
+
+        <p>В рамках первой Модели СГБМ будет моделироваться работа двух комитетов:</p>
+
+        <ul>
+            <li>Совета глав государств (повестка: Safety and Secure Region)</li>
+            <li>Совета министров иностранных дел (повестка: Sustainable Development)</li>
+        </ul>
+
+        <p>Повестки дня соответствуют двум актуальным повесткам СГБМ на 2018-2019 годы.</p>
+
+        <p>В каждом из комитетов будет по 22 делегата, 11 из которых представляют
+        государства-наблюдатели (observer states). Особенность наблюдателей заключается
+        в том, что у них есть право выступать и высказывать своё мнение, но нет права
+        голоса или процедурного вотума.</p>
+
+        <p>Рабочий язык сессий — английский.</p>
+
+        <p>Важную роль при распределении стран между участниками играет не только уровень
+        владения английским языком, но и эссе на тему "How to built the Baltic identity?".</p>
+    {% endif %}
 {% endblock %}
