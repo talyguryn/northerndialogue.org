@@ -80,6 +80,14 @@
             («Вторая жизнь Уве», «Бергман», «Охота», «Здесь была Бритт-Мари» и ещё более 50 скандинавских кинокартин)</p>
     {% endif %}
 
+    {% if lang == 'en' %}
+        <p><b>Elena Rachinskaya</b> — philologist, translator from the Norwegian language, employee of the culture
+            department of the Norwegian Embassy in Moscow, Winner of NORLA’s Translator’s Award (2008, Non-Fiction)</p>
+    {% elseif lang == 'ru' %}
+        <p><b>Елена Рачинская</b> — филолог, переводчик с норвежского языка, сотрудник отдела культуры
+            посольства Норвегии в Москве, Лауреат премии Норвежского государственного литературного агенства НОРЛА</p>
+    {% endif %}
+
     <h2>{{ ruseng('Свежие новости', 'Latest news') }}</h2>
 
     <div class="news">
