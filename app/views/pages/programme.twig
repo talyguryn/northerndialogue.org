@@ -5,7 +5,9 @@
 {% block content %}
     {#<h1>{{ title }}</h1>#}
 
-    <h2 id="main-programme" class="label" data-label-text="{{ ruseng('предварительная', 'preliminary') }}">{{ ruseng('Основная программа', 'Main programme') }}</h2>
+    <h2 id="main-programme" data-label-text="{{ ruseng('предварительная', 'preliminary') }}">{{ ruseng('Основная программа', 'Main programme') }}</h2>
+
+    Рабочий язык панельных дискуссий – английский.
 
     <div class="table">
         <div class="table__row">
@@ -14,27 +16,95 @@
             <div class="table__cell table__cell--title">{{ ruseng('Спикеры и гости', 'Speakers and guests') }}</div>
         </div>
         <div class="table__row">
-            <div class="table__cell table__cell--small"><b>{{ ruseng('Пн', 'Mon') }}</b><br>8.04.19</div>
+            <div class="table__cell table__cell--small"><b>{{ ruseng('Пн', 'Mon') }}</b><br>8.04.19<br>16:00-18:30</div>
             <div class="table__cell">{{ ruseng('Панельная дискуссия «Культурное сотрудничество»', 'Panel discussion «Cultural Exchange»') }}</div>
-            <div class="table__cell">{{ ruseng('Российские и Скандинавские культурные и общественные деятели, писатели, представители блогосферы.', 'Russian and Nordic writers, directors, artists etc.') }}</div>
+            <div class="table__cell">
+                {% if lang == 'en' %}
+                    <p><b>Elena Dorofeyeva</b> — a literary critic and translator, an expert on the history
+                        of Finnish literature, the author of articles on Finnish and Scandinavian writers,
+                        the author of the idea and compiler of the book At the Source of Russian Scandinavian Studies:
+                        Portraits of Philologists and Translators (2018).</p>
+                {% elseif lang == 'ru' %}
+                    <p><b>Елена Дорофеева</b> — литературовед и переводчик, специалист по истории литературы Финляндии,
+                        автор статей о финских и скандинавских писателях, автор идеи и составитель книги
+                        "У истоков российской скандинавистики: портреты филологов и переводчиков" (2018).</p>
+                {% endif %}
+
+                {% if lang == 'en' %}
+                    <p><b>Natalia Goncharova</b> — a cinema project manager of the CoolConnections art association
+                        (festivals "Danish Wave", "Sweden's New Cinema", "Norwegian Film Festival", Finnish Film Festival).</p>
+                {% elseif lang == 'ru' %}
+                    <p><b>Наталья Гончарова</b> — куратор кинопроектов арт-объединения CoolConnections
+                        (фестивалей "Danish Wave", "Новое кино Швеции", "Фестиваль норвежского кино", Фестиваль кино Финляндии).</p>
+                {% endif %}
+
+                {% if lang == 'en' %}
+                    <p><b>Kristina Ivannikova</b> — a film expert, post-graduate student of VGIK, curator of the “Drifting Scandinavia”
+                        film club in the Museum of Cinema, author of articles on the formation and development of Finnish cinema.</p>
+                {% elseif lang == 'ru' %}
+                    <p><b>Кристина Иванникова</b> — Киновед, аспирант ВГИК, куратор киноклуба «Дрейфующая Скандинавия» в Музее кино,
+                        автор статей, посвящённых становлению и развитию финского кинематографа.</p>
+                {% endif %}
+
+                {% if lang == 'en' %}
+                    <p><b>Roman Dorofeev</b> — Director for film distribution of the Russian Reporting Television Agency
+                        (“The Second Life of Uwe”, “Bergman”, “The Hunt”, “Britt-Marie was Here” and over 50 more Scandinavian films)</p>
+                {% elseif lang == 'ru' %}
+                    <p><b>Роман Дорофеев</b> — Директор по кинопрокату Телевизионного агенства «Русский Репортаж»
+                        («Вторая жизнь Уве», «Бергман», «Охота», «Здесь была Бритт-Мари» и ещё более 50 скандинавских кинокартин)</p>
+                {% endif %}
+
+                {% if lang == 'en' %}
+                    <p><b>Elena Rachinskaya</b> — philologist, translator from the Norwegian language, employee of the culture
+                        department of the Norwegian Embassy in Moscow, Winner of NORLA’s Translator’s Award (2008, Non-Fiction)</p>
+                {% elseif lang == 'ru' %}
+                    <p><b>Елена Рачинская</b> — филолог, переводчик с норвежского языка, сотрудник отдела культуры
+                        посольства Норвегии в Москве, Лауреат премии Норвежского государственного литературного агенства НОРЛА</p>
+                {% endif %}
+            </div>
         </div>
         <div class="table__row">
-            <div class="table__cell table__cell--small"><b>{{ ruseng('Вт', 'Tue') }}</b><br>9.04.19</div>
+            <div class="table__cell table__cell--small"><b>{{ ruseng('Вт', 'Tue') }}</b><br>9.04.19<br>16:00-18:30</div>
             <div class="table__cell">{{ ruseng('Панельная дискуссия «Сотрудничество в сфере экономики и энергетики»', 'Panel discussion «Economic and Energy Cooperation»') }}</div>
-            <div class="table__cell">{{ ruseng('Представители Скандинавских компаний, ведущих деятельность в России, молодые предприниматели, представители Минпромторга и Минэнерго России.', 'Representatives of Nordic companies operating in Russia, young entrepreneurs, representatives of the Ministry of Industry and Trade of Russia and the Ministry of Energy of Russia.') }}</div>
+            <div class="table__cell">
+                <p><b>Эсбен Джуль Бергман Шьодт</b> — министр-советник, сотрудник Торгового отдела Посольства Королевства
+                Дании в Москве, вопросы сельского хозяйства, продовольствия, рыболовства.</p>
+
+                <p><b>Юрий Львович Мазуров</b> — доктор географических наук, профессор кафедры рационального
+                природопользования Географического факультета МГУ им. М.В. Ломоносова.</p>
+
+                <p><b>Анна Киреева</b> — эксперт проекта «Экологические проблемы Северо-Запада России», «Беллона-Мурманск».</p>
+            </div>
         </div>
         <div class="table__row">
-            <div class="table__cell table__cell--small"><b>{{ ruseng('Ср', 'Wed') }}</b><br>10.04.19</div>
+            <div class="table__cell table__cell--small"><b>{{ ruseng('Ср', 'Wed') }}</b><br>10.04.19<br>16:00-18:30</div>
             <div class="table__cell">{{ ruseng('Панельная дискуссия «Сотрудничество в области экологии и охраны окружающей среды»', 'Panel discussion «Environmental Cooperation»') }}</div>
-            <div class="table__cell">{{ ruseng('Представители общественных организаций, специализирующихся на природоохранной деятельности, общественные деятели, специалисты в области экологии и устойчивого развития.', 'Representatives of public organizations specializing in environmental activities, public figures, experts in the field of ecology and sustainable development.') }}</div>
+            <div class="table__cell">
+                <p><b>Карл Гуннар Аксельссон</b> — основатель, владелец и CEO компании «PROJiGO» (консалтинг в сфере
+                управления проектами в пищевой промышленности); основатель и владелец компании
+                «Axelsson’s Mekaniska Verkstad» (производство и сборка гигиенического оборудования
+                для пищевой (особенно молочной) промышленности).</p>
+
+                <p><b>Максим Львович Поляков</b> — журналист, медиа-менеджер, предприниматель.
+                Выпускник Стокгольмской школы экономики (1992), профессор МГИМО МИД России,
+                академический директор магистратуры «Цифровые коммуникации и новые медиа» в ИОН РАНХиГС при Президенте РФ.</p>
+
+                <p><b>Илона Васильева</b> — торговый представитель Исландии в Российской Федерации (приглашение направлено)</p>
+
+            </div>
         </div>
         <div class="table__row">
-            <div class="table__cell table__cell--small"><b>{{ ruseng('Чт', 'Thu') }}</b><br>11.04.19</div>
+            <div class="table__cell table__cell--small"><b>{{ ruseng('Чт', 'Thu') }}</b><br>11.04.19<br>16:00-18:30</div>
             <div class="table__cell">{{ ruseng('Панельная дискуссия «Политическое сотрудничество»', 'Panel discussion «Political Cooperation»') }}</div>
-            <div class="table__cell">{{ ruseng('Представители МИД России, посольств Скандинавских стран, политики и общественные деятели.', 'Representatives of the Russian Foreign Ministry, embassies of the Nordic countries, politicians and public figures.') }}</div>
+            <div class="table__cell">
+                <p><b>Николай Владимирович Кокко</b> — советник Отдела Финляндии и Швеции МИД России.</p>
+
+                <p><b>Хойкур Хаукссон</b> — официальный представитель СМИ Исландии при МИД России</p>
+
+            </div>
         </div>
         <div class="table__row">
-            <div class="table__cell table__cell--small"><b>{{ ruseng('Пт', 'Fri') }}</b><br>12.04.19</div>
+            <div class="table__cell table__cell--small"><b>{{ ruseng('Пт', 'Fri') }}</b><br>12.04.19<br>12:00-19:00</div>
             <div class="table__cell">{{ ruseng('Молодежный день. Модель СГБМ', 'The Youth Day. Model CBSS (The Council of the Baltic Sea States)') }}</div>
             <div class="table__cell">{{ ruseng('Представители молодежи России и Скандинавии.', 'Representatives of the youth of Russia and Scandinavia.') }}</div>
         </div>
