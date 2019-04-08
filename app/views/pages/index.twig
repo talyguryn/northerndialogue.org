@@ -45,53 +45,39 @@
 
     <h2>{{ ruseng('Наши спикеры', 'Our speakers') }}</h2>
 
-    {% if lang == 'en' %}
-        <p><b>Elena Dorofeyeva</b> — a literary critic and translator, an expert on the history
-            of Finnish literature, the author of articles on Finnish and Scandinavian writers,
-            the author of the idea and compiler of the book At the Source of Russian Scandinavian Studies:
-            Portraits of Philologists and Translators (2018).</p>
-    {% elseif lang == 'ru' %}
-        <p><b>Елена Дорофеева</b> — литературовед и переводчик, специалист по истории литературы Финляндии,
-            автор статей о финских и скандинавских писателях, автор идеи и составитель книги
-            "У истоков российской скандинавистики: портреты филологов и переводчиков" (2018).</p>
-    {% endif %}
-
-    {% if lang == 'en' %}
-        <p><b>Natalia Goncharova</b> — a cinema project manager of the CoolConnections art association
-            (festivals "Danish Wave", "Sweden's New Cinema", "Norwegian Film Festival", Finnish Film Festival).</p>
-    {% elseif lang == 'ru' %}
-        <p><b>Наталья Гончарова</b> — куратор кинопроектов арт-объединения CoolConnections
-            (фестивалей "Danish Wave", "Новое кино Швеции", "Фестиваль норвежского кино", Фестиваль кино Финляндии).</p>
-    {% endif %}
-
-    {% if lang == 'en' %}
-        <p><b>Kristina Ivannikova</b> — a film expert, post-graduate student of VGIK, curator of the “Drifting Scandinavia”
-            film club in the Museum of Cinema, author of articles on the formation and development of Finnish cinema.</p>
-    {% elseif lang == 'ru' %}
-        <p><b>Кристина Иванникова</b> — Киновед, аспирант ВГИК, куратор киноклуба «Дрейфующая Скандинавия» в Музее кино,
-            автор статей, посвящённых становлению и развитию финского кинематографа.</p>
-    {% endif %}
-
-    {% if lang == 'en' %}
-        <p><b>Roman Dorofeev</b> — Director for film distribution of the Russian Reporting Television Agency
-            (“The Second Life of Uwe”, “Bergman”, “The Hunt”, “Britt-Marie was Here” and over 50 more Scandinavian films)</p>
-    {% elseif lang == 'ru' %}
-        <p><b>Роман Дорофеев</b> — Директор по кинопрокату Телевизионного агенства «Русский Репортаж»
-            («Вторая жизнь Уве», «Бергман», «Охота», «Здесь была Бритт-Мари» и ещё более 50 скандинавских кинокартин)</p>
-    {% endif %}
-
-    {% if lang == 'en' %}
-        <p><b>Elena Rachinskaya</b> — philologist, translator from the Norwegian language, employee of the culture
-            department of the Norwegian Embassy in Moscow, Winner of NORLA’s Translator’s Award (2008, Non-Fiction)</p>
-    {% elseif lang == 'ru' %}
-        <p><b>Елена Рачинская</b> — филолог, переводчик с норвежского языка, сотрудник отдела культуры
-            посольства Норвегии в Москве, Лауреат премии Норвежского государственного литературного агенства НОРЛА</p>
-    {% endif %}
+    See «<a href="{{ path_for('speakers-page') }}">speakers</a>» and «<a href="{{ path_for('programme-page') }}">programme</a>» pages.
 
     <h2>{{ ruseng('Свежие новости', 'Latest news') }}</h2>
 
     <div class="news">
         {% set news = [
+            {
+                date: ruseng('8 апреля', 'Apr 8th'),
+                text: ruseng('Приветствуем вас, наши дорогие участники, спикеры, слушатели, гости и все, кто следит за первым в своем роде молодёжным форумом «Северный диалог»! Рады сообщить вам, что вчера состоялось торжественное открытие нашего форума, и сегодня начинается его основная программа. Мы приготовили для вас множество сюрпризов, увлекательных мероприятий и познавательных дискуссий. Впрочем, обо всем по порядку. Итак, сегодня наших участников ждёт:
+<ul>
+<li>Прогулка по Красной площади, без которой не обходится ни одна поездка в Москву,</li>
+<li>Посещение Собора Василия Блаженного – не только «того самого храма со всех открыток», но и объекта из списка Всемирного наследия ЮНЕСКО,</li>
+<li>Посещение парка «Зарядье» - уникального парка-музея, где природа пробуждается от зимнего сна,</li>
+<li>Прогулка по Китай-городу – историческому району Москвы, где живёт история,</li>
+</ul>
+<p>И, разумеется, в 16:00 в фойе Конференц-зала начнется ПЕРВАЯ СЕКЦИЯ ФОРУМА «КУЛЬТУРНОЕ СОТРУДНИЧЕСТВО» (гиперссылка на пост о секции), где расскажут о трудностях перевода скандинавской литературы, а также о кинематографе северных стран и его пути в Россию.</p>
+<p>Кроме того, после секции мы приглашаем вас в ауд.214 на показ фильма «Контики» на языке оригинала с английскими субтитрами.</p>
+
+<p/>Оставайтесь с нами!</p>', 'Dear participants, speakers, guests and everyone who is interested in the first of the kind youth forum “Nothern Dialogue”. We are happy to inform you that our forum is officially open and our program starts today. We’ve prepared many interesting and exciting events for you, and we can’t help telling you about some of them. So, today our participants will:
+
+<ul>
+<li>Walk around the Red Square – a must for a tourist in Moscow,</li>
+<li>Visit Saint Basil’s Cathedral – not only “that Russian church from a post card”, but also an object from UNESCO Cultural Heritage List,</li>
+<li>Visit “Zaryadye” to admire Russian nature that wakens after the winter and educate themselves,</li>
+<li>Walk around Kitay-gorod – a historic district, where history itself lives,</li>
+</ul>
+
+<p>And, of course, today at 16:00 we are welcoming you to attend THE FIRST FORUM SECTION “CULTURAL COOPERATION”, where we will tell you about beautiful and marvelous cinema and literature of Scandinavian countries and the image of Nothern culture in Russia.</p>
+
+<p>Moreover, after the session we invite you to watch the film “Kontiki” in room 214 and discuss it in English.</p>
+
+<p>Stay tuned!</p>')
+            },
             {
                 date: ruseng('12 Февраля', 'Feb 12th'),
                 text: ruseng('Представляем Вашему вниманию предварительную <a href="/programme#social-programme">культурную программу</a> Форума!', 'The preliminary <a href="/programme#social-programme">social programme</a> is available now!')
